@@ -1,0 +1,325 @@
+fileFormatVersion: 2
+guid: 2e2821413cec00048a9e2536723c1a9d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3084448212150184932
+    second: wind_SpriteSheet_Walk_0
+  - first:
+      213: 7654863478301247392
+    second: wind_SpriteSheet_Walk_1
+  - first:
+      213: 5640346204245388906
+    second: wind_SpriteSheet_Walk_2
+  - first:
+      213: 4368080472169717412
+    second: wind_SpriteSheet_Walk_3
+  - first:
+      213: 1835811669006463135
+    second: wind_SpriteSheet_Walk_4
+  - first:
+      213: 5531570401034937479
+    second: wind_SpriteSheet_Walk_5
+  - first:
+      213: 7985584361909752093
+    second: wind_SpriteSheet_Walk_6
+  - first:
+      213: -4751558738827942138
+    second: wind_SpriteSheet_Walk_7
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebec4d8e492eca20800000000000000
+      internalID: 3084448212150184932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.49491784, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a7c14cb6c98b3a60800000000000000
+      internalID: 7654863478301247392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 0
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.580208, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6ee44a2df8864e40800000000000000
+      internalID: 5640346204245388906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 0
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5435401, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae1ffddb0a8e9c30800000000000000
+      internalID: 4368080472169717412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 0
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5095968, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90b5a58cfc1a7910800000000000000
+      internalID: 1835811669006463135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 0
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.50070906, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784a0c3e8f514cc40800000000000000
+      internalID: 5531570401034937479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 0
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.54106236, y: 0.4999999}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d119b8feaae72de60800000000000000
+      internalID: 7985584361909752093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 0
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.65030754, y: 0.50513977}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607e1ca70821f0eb0800000000000000
+      internalID: -4751558738827942138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: da73f53f72d6cc84bb8e6de210460a98
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wind_SpriteSheet_Walk_0: 3084448212150184932
+      wind_SpriteSheet_Walk_1: 7654863478301247392
+      wind_SpriteSheet_Walk_2: 5640346204245388906
+      wind_SpriteSheet_Walk_3: 4368080472169717412
+      wind_SpriteSheet_Walk_4: 1835811669006463135
+      wind_SpriteSheet_Walk_5: 5531570401034937479
+      wind_SpriteSheet_Walk_6: 7985584361909752093
+      wind_SpriteSheet_Walk_7: -4751558738827942138
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

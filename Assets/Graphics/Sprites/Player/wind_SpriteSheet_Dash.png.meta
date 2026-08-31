@@ -1,0 +1,644 @@
+fileFormatVersion: 2
+guid: ce685e452b4bcbb4890b83e7e0d73c65
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3067117255794726007
+    second: wind_SpriteSheet_Dash_0
+  - first:
+      213: 9135564324091953308
+    second: wind_SpriteSheet_Dash_1
+  - first:
+      213: -8826555760404303120
+    second: wind_SpriteSheet_Dash_2
+  - first:
+      213: -2430391972197745235
+    second: wind_SpriteSheet_Dash_3
+  - first:
+      213: -4535108458664849252
+    second: wind_SpriteSheet_Dash_4
+  - first:
+      213: -3095929267200668724
+    second: wind_SpriteSheet_Dash_5
+  - first:
+      213: 3836729467613575562
+    second: wind_SpriteSheet_Dash_6
+  - first:
+      213: -6093489051706843435
+    second: wind_SpriteSheet_Dash_7
+  - first:
+      213: -8115336783574842630
+    second: wind_SpriteSheet_Dash_8
+  - first:
+      213: 5797877836698664692
+    second: wind_SpriteSheet_Dash_9
+  - first:
+      213: 7997234263905794454
+    second: wind_SpriteSheet_Dash_10
+  - first:
+      213: -597016140605101822
+    second: wind_SpriteSheet_Dash_11
+  - first:
+      213: -836642119885807357
+    second: wind_SpriteSheet_Dash_12
+  - first:
+      213: -6727807887713842342
+    second: wind_SpriteSheet_Dash_13
+  - first:
+      213: -7604709995478180111
+    second: wind_SpriteSheet_Dash_14
+  - first:
+      213: 8089977581466748864
+    second: wind_SpriteSheet_Dash_15
+  - first:
+      213: -7289937543727851512
+    second: wind_SpriteSheet_Dash_16
+  - first:
+      213: -4367811258047364924
+    second: wind_SpriteSheet_Dash_17
+  - first:
+      213: -4514472143804159308
+    second: wind_SpriteSheet_Dash_18
+  - first:
+      213: 7244251453908713708
+    second: wind_SpriteSheet_Dash_19
+  - first:
+      213: 5956446095471901831
+    second: wind_SpriteSheet_Dash_20
+  - first:
+      213: 5699100163824898603
+    second: wind_SpriteSheet_Dash_21
+  - first:
+      213: 8196975156332653817
+    second: wind_SpriteSheet_Dash_22
+  - first:
+      213: 2736586027290534406
+    second: wind_SpriteSheet_Dash_23
+  - first:
+      213: 4908642258822529624
+    second: wind_SpriteSheet_Dash_24
+  - first:
+      213: -3158335967253433318
+    second: wind_SpriteSheet_Dash_25
+  - first:
+      213: -8951615249325576192
+    second: wind_SpriteSheet_Dash_26
+  - first:
+      213: -6958628545218990639
+    second: wind_SpriteSheet_Dash_27
+  - first:
+      213: 6277178556713416480
+    second: wind_SpriteSheet_Dash_28
+  - first:
+      213: -5957908881111774785
+    second: wind_SpriteSheet_Dash_29
+  - first:
+      213: -7985703757395920255
+    second: wind_SpriteSheet_Dash_30
+  - first:
+      213: 8191599116699161203
+    second: wind_SpriteSheet_Dash_31
+  - first:
+      213: 6874526328834322061
+    second: wind_SpriteSheet_Dash_32
+  - first:
+      213: 7641181022525973073
+    second: wind_SpriteSheet_Dash_33
+  - first:
+      213: 8208353846714943379
+    second: wind_SpriteSheet_Dash_34
+  - first:
+      213: -2847642724029076613
+    second: wind_SpriteSheet_Dash_35
+  - first:
+      213: 566694785936723755
+    second: wind_SpriteSheet_Dash_36
+  - first:
+      213: -5075140718101955211
+    second: wind_SpriteSheet_Dash_37
+  - first:
+      213: 7906644445226848182
+    second: wind_SpriteSheet_Dash_38
+  - first:
+      213: -5298640619708254969
+    second: wind_SpriteSheet_Dash_39
+  - first:
+      213: -1846839710713643638
+    second: wind_SpriteSheet_Dash_40
+  - first:
+      213: -2942753575429676208
+    second: wind_SpriteSheet_Dash_41
+  - first:
+      213: 5622565769274501322
+    second: wind_SpriteSheet_Dash_42
+  - first:
+      213: 2710412375776001845
+    second: wind_SpriteSheet_Dash_43
+  - first:
+      213: 5315472386365333240
+    second: wind_SpriteSheet_Dash_44
+  - first:
+      213: -8062811985761459671
+    second: wind_SpriteSheet_Dash_45
+  - first:
+      213: -620143072344242977
+    second: wind_SpriteSheet_Dash_46
+  - first:
+      213: -704869823251987699
+    second: wind_SpriteSheet_Dash_47
+  - first:
+      213: -900144568269749074
+    second: wind_SpriteSheet_Dash_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_0
+      rect:
+        serializedVersion: 2
+        x: 6939
+        y: 0
+        width: 73
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7749d14d4e6909a20800000000000000
+      internalID: 3067117255794726007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 33
+        height: 49
+      alignment: 9
+      pivot: {x: 0.40974763, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccbc4c20cbc0905d0800000000000000
+      internalID: -3095929267200668724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_6
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 0
+        width: 62
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5351917, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8971687f1dce3530800000000000000
+      internalID: 3836729467613575562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_7
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 0
+        width: 66
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de184efdf39f6ba0800000000000000
+      internalID: -6093489051706843435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_8
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 0
+        width: 68
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af24c563138806f80800000000000000
+      internalID: -8115336783574842630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_9
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 0
+        width: 67
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4feb88b8c23367050800000000000000
+      internalID: 5797877836698664692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_10
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 0
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699ffad1132ebfe60800000000000000
+      internalID: 7997234263905794454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_25
+      rect:
+        serializedVersion: 2
+        x: 5798
+        y: 0
+        width: 61
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a14f48edb265b24d0800000000000000
+      internalID: -3158335967253433318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_26
+      rect:
+        serializedVersion: 2
+        x: 6086
+        y: 0
+        width: 61
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000baf1cb5975c380800000000000000
+      internalID: -8951615249325576192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_27
+      rect:
+        serializedVersion: 2
+        x: 6374
+        y: 0
+        width: 61
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd245ed43cfd6f90800000000000000
+      internalID: -6958628545218990639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_28
+      rect:
+        serializedVersion: 2
+        x: 6662
+        y: 0
+        width: 61
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0273a90b3a40d1750800000000000000
+      internalID: 6277178556713416480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_31
+      rect:
+        serializedVersion: 2
+        x: 8080
+        y: 0
+        width: 40
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372d145eef76ea170800000000000000
+      internalID: 8191599116699161203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_32
+      rect:
+        serializedVersion: 2
+        x: 8345
+        y: 0
+        width: 40
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5397461, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8e6d35f549376f50800000000000000
+      internalID: 6874526328834322061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_49
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 0
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9910f051cf78542bc1089c3bd312a2
+      internalID: -730838435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_Dash_1
+      rect:
+        serializedVersion: 2
+        x: 7227
+        y: 0
+        width: 73
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23541ff9ad629e49b271fff763a6983
+      internalID: 9135564324091953308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ab2ee6cc9c1483d4a8a1467b480ef8d8
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wind_SpriteSheet_Dash_0: 3067117255794726007
+      wind_SpriteSheet_Dash_1: 9135564324091953308
+      wind_SpriteSheet_Dash_10: 7997234263905794454
+      wind_SpriteSheet_Dash_11: -597016140605101822
+      wind_SpriteSheet_Dash_12: -836642119885807357
+      wind_SpriteSheet_Dash_13: -6727807887713842342
+      wind_SpriteSheet_Dash_14: -7604709995478180111
+      wind_SpriteSheet_Dash_15: 8089977581466748864
+      wind_SpriteSheet_Dash_16: -7289937543727851512
+      wind_SpriteSheet_Dash_17: -4367811258047364924
+      wind_SpriteSheet_Dash_18: -4514472143804159308
+      wind_SpriteSheet_Dash_19: 7244251453908713708
+      wind_SpriteSheet_Dash_2: -8826555760404303120
+      wind_SpriteSheet_Dash_20: 5956446095471901831
+      wind_SpriteSheet_Dash_21: 5699100163824898603
+      wind_SpriteSheet_Dash_22: 8196975156332653817
+      wind_SpriteSheet_Dash_23: 2736586027290534406
+      wind_SpriteSheet_Dash_24: 4908642258822529624
+      wind_SpriteSheet_Dash_25: -3158335967253433318
+      wind_SpriteSheet_Dash_26: -8951615249325576192
+      wind_SpriteSheet_Dash_27: -6958628545218990639
+      wind_SpriteSheet_Dash_28: 6277178556713416480
+      wind_SpriteSheet_Dash_29: -5957908881111774785
+      wind_SpriteSheet_Dash_3: -2430391972197745235
+      wind_SpriteSheet_Dash_30: -7985703757395920255
+      wind_SpriteSheet_Dash_31: 8191599116699161203
+      wind_SpriteSheet_Dash_32: 6874526328834322061
+      wind_SpriteSheet_Dash_33: 7641181022525973073
+      wind_SpriteSheet_Dash_34: 8208353846714943379
+      wind_SpriteSheet_Dash_35: -2847642724029076613
+      wind_SpriteSheet_Dash_36: 566694785936723755
+      wind_SpriteSheet_Dash_37: -5075140718101955211
+      wind_SpriteSheet_Dash_38: 7906644445226848182
+      wind_SpriteSheet_Dash_39: -5298640619708254969
+      wind_SpriteSheet_Dash_4: -4535108458664849252
+      wind_SpriteSheet_Dash_40: -1846839710713643638
+      wind_SpriteSheet_Dash_41: -2942753575429676208
+      wind_SpriteSheet_Dash_42: 5622565769274501322
+      wind_SpriteSheet_Dash_43: 2710412375776001845
+      wind_SpriteSheet_Dash_44: 5315472386365333240
+      wind_SpriteSheet_Dash_45: -8062811985761459671
+      wind_SpriteSheet_Dash_46: -620143072344242977
+      wind_SpriteSheet_Dash_47: -704869823251987699
+      wind_SpriteSheet_Dash_48: -900144568269749074
+      wind_SpriteSheet_Dash_49: -730838435
+      wind_SpriteSheet_Dash_5: -3095929267200668724
+      wind_SpriteSheet_Dash_6: 3836729467613575562
+      wind_SpriteSheet_Dash_7: -6093489051706843435
+      wind_SpriteSheet_Dash_8: -8115336783574842630
+      wind_SpriteSheet_Dash_9: 5797877836698664692
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

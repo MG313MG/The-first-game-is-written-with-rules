@@ -1,0 +1,781 @@
+fileFormatVersion: 2
+guid: f47c483b6a176114c8766b7272b50121
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4044078850726127060
+    second: wind_SpriteSheet_attak 3_0
+  - first:
+      213: -6064080255852623652
+    second: wind_SpriteSheet_attak 3_1
+  - first:
+      213: -8316271126761765433
+    second: wind_SpriteSheet_attak 3_2
+  - first:
+      213: 2461645930532835498
+    second: wind_SpriteSheet_attak 3_3
+  - first:
+      213: -6570250560497939800
+    second: wind_SpriteSheet_attak 3_4
+  - first:
+      213: 8712161403763228176
+    second: wind_SpriteSheet_attak 3_5
+  - first:
+      213: -2267344951522851053
+    second: wind_SpriteSheet_attak 3_6
+  - first:
+      213: 7860749738675452505
+    second: wind_SpriteSheet_attak 3_7
+  - first:
+      213: 1885415314500807830
+    second: wind_SpriteSheet_attak 3_8
+  - first:
+      213: 4822379505035003557
+    second: wind_SpriteSheet_attak 3_9
+  - first:
+      213: 2604558320778611881
+    second: wind_SpriteSheet_attak 3_10
+  - first:
+      213: -5649609418215753291
+    second: wind_SpriteSheet_attak 3_11
+  - first:
+      213: -4168584876082115786
+    second: wind_SpriteSheet_attak 3_12
+  - first:
+      213: 8484031699819600418
+    second: wind_SpriteSheet_attak 3_13
+  - first:
+      213: 3647926557504064872
+    second: wind_SpriteSheet_attak 3_14
+  - first:
+      213: -5792077636815013047
+    second: wind_SpriteSheet_attak 3_15
+  - first:
+      213: -6299284911525155653
+    second: wind_SpriteSheet_attak 3_16
+  - first:
+      213: 329955328028517818
+    second: wind_SpriteSheet_attak 3_17
+  - first:
+      213: 3144060112892861903
+    second: wind_SpriteSheet_attak 3_18
+  - first:
+      213: 3720831532195589436
+    second: wind_SpriteSheet_attak 3_19
+  - first:
+      213: 8633475146813792111
+    second: wind_SpriteSheet_attak 3_20
+  - first:
+      213: -4380532119854146634
+    second: wind_SpriteSheet_attak 3_21
+  - first:
+      213: 7892006263613440097
+    second: wind_SpriteSheet_attak 3_22
+  - first:
+      213: 2489555215509891859
+    second: wind_SpriteSheet_attak 3_23
+  - first:
+      213: -1210896719496837736
+    second: wind_SpriteSheet_attak 3_24
+  - first:
+      213: 5178715396205538357
+    second: wind_SpriteSheet_attak 3_25
+  - first:
+      213: 3974524154795973091
+    second: wind_SpriteSheet_attak 3_26
+  - first:
+      213: -6639965592285804644
+    second: wind_SpriteSheet_attak 3_27
+  - first:
+      213: 1330304683554731365
+    second: wind_SpriteSheet_attak 3_28
+  - first:
+      213: 7914135330499698246
+    second: wind_SpriteSheet_attak 3_29
+  - first:
+      213: -8122050059149731448
+    second: wind_SpriteSheet_attak 3_30
+  - first:
+      213: 872577473022858941
+    second: wind_SpriteSheet_attak 3_31
+  - first:
+      213: -4899531205791552597
+    second: wind_SpriteSheet_attak 3_32
+  - first:
+      213: 5713739868484214866
+    second: wind_SpriteSheet_attak 3_33
+  - first:
+      213: -819495441691344035
+    second: wind_SpriteSheet_attak 3_34
+  - first:
+      213: -8499693939371689162
+    second: wind_SpriteSheet_attak 3_35
+  - first:
+      213: 3037745689018489086
+    second: wind_SpriteSheet_attak 3_36
+  - first:
+      213: -526468840241845675
+    second: wind_SpriteSheet_attak 3_37
+  - first:
+      213: 9113542143467496720
+    second: wind_SpriteSheet_attak 3_38
+  - first:
+      213: 7906192875000035588
+    second: wind_SpriteSheet_attak 3_39
+  - first:
+      213: -3254961156053976706
+    second: wind_SpriteSheet_attak 3_40
+  - first:
+      213: -1462173760169377834
+    second: wind_SpriteSheet_attak 3_41
+  - first:
+      213: -2164973961778700275
+    second: wind_SpriteSheet_attak 3_42
+  - first:
+      213: 559604231199936815
+    second: wind_SpriteSheet_attak 3_43
+  - first:
+      213: 4246800727139127691
+    second: wind_SpriteSheet_attak 3_44
+  - first:
+      213: -7848146567063361499
+    second: wind_SpriteSheet_attak 3_45
+  - first:
+      213: 7036550947430385655
+    second: wind_SpriteSheet_attak 3_46
+  - first:
+      213: -4572978343557953637
+    second: wind_SpriteSheet_attak 3_47
+  - first:
+      213: 4157732500822240411
+    second: wind_SpriteSheet_attak 3_48
+  - first:
+      213: -771311058267730163
+    second: wind_SpriteSheet_attak 3_49
+  - first:
+      213: 7551597837567319271
+    second: wind_SpriteSheet_attak 3_50
+  - first:
+      213: -9019926339515028996
+    second: wind_SpriteSheet_attak 3_51
+  - first:
+      213: -6291076828486344725
+    second: wind_SpriteSheet_attak 3_52
+  - first:
+      213: -7056560027060064947
+    second: wind_SpriteSheet_attak 3_53
+  - first:
+      213: -6609872256863534282
+    second: wind_SpriteSheet_attak 3_54
+  - first:
+      213: 8226550765335498375
+    second: wind_SpriteSheet_attak 3_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_7
+      rect:
+        serializedVersion: 2
+        x: 4301
+        y: 1
+        width: 59
+        height: 53
+      alignment: 9
+      pivot: {x: 0.4999, y: 0.47015688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95abef14d3ef61d60800000000000000
+      internalID: 7860749738675452505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_8
+      rect:
+        serializedVersion: 2
+        x: 4568
+        y: 1
+        width: 99
+        height: 68
+      alignment: 9
+      pivot: {x: 0.5, y: 0.38923293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ce6ea3d375a2a10800000000000000
+      internalID: 1885415314500807830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_10
+      rect:
+        serializedVersion: 2
+        x: 4880
+        y: 2
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac0cc24eff352420800000000000000
+      internalID: 2604558320778611881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_11
+      rect:
+        serializedVersion: 2
+        x: 4946
+        y: 0
+        width: 26
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b97c83ca2e8891b0800000000000000
+      internalID: -5649609418215753291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_12
+      rect:
+        serializedVersion: 2
+        x: 5165
+        y: 1
+        width: 57
+        height: 62
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63b4f0d24263626c0800000000000000
+      internalID: -4168584876082115786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_13
+      rect:
+        serializedVersion: 2
+        x: 5262
+        y: 0
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a96e271e55db570800000000000000
+      internalID: 8484031699819600418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_14
+      rect:
+        serializedVersion: 2
+        x: 5456
+        y: 1
+        width: 53
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4544241}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d4eb260e900a230800000000000000
+      internalID: 3647926557504064872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_15
+      rect:
+        serializedVersion: 2
+        x: 5550
+        y: 0
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b382ab3186e9fa0800000000000000
+      internalID: -5792077636815013047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_16
+      rect:
+        serializedVersion: 2
+        x: 5749
+        y: 1
+        width: 40
+        height: 60
+      alignment: 9
+      pivot: {x: 0.55, y: 0.48055425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbca09d7fb17498a0800000000000000
+      internalID: -6299284911525155653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_18
+      rect:
+        serializedVersion: 2
+        x: 5831
+        y: 0
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd1475c302f1ab20800000000000000
+      internalID: 3144060112892861903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_19
+      rect:
+        serializedVersion: 2
+        x: 6043
+        y: 1
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d2791909c03a330800000000000000
+      internalID: 3720831532195589436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_20
+      rect:
+        serializedVersion: 2
+        x: 6118
+        y: 0
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6fdff667e340d770800000000000000
+      internalID: 8633475146813792111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_32
+      rect:
+        serializedVersion: 2
+        x: 3146
+        y: 1
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab6ad0c35e510cb0800000000000000
+      internalID: -4899531205791552597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_33
+      rect:
+        serializedVersion: 2
+        x: 3433
+        y: 1
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2502dff33284b4f40800000000000000
+      internalID: 5713739868484214866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_34
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 1
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d538fe6dc3190a4f0800000000000000
+      internalID: -819495441691344035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_35
+      rect:
+        serializedVersion: 2
+        x: 4008
+        y: 1
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63bb53c35650b0a80800000000000000
+      internalID: -8499693939371689162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_38
+      rect:
+        serializedVersion: 2
+        x: 6331
+        y: 1
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 015aeea3b4ec97e70800000000000000
+      internalID: 9113542143467496720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_39
+      rect:
+        serializedVersion: 2
+        x: 6619
+        y: 1
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409f910f78078bd60800000000000000
+      internalID: 7906192875000035588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_40
+      rect:
+        serializedVersion: 2
+        x: 6907
+        y: 1
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7935b7f21e04d2d0800000000000000
+      internalID: -3254961156053976706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wind_SpriteSheet_attak 3_41
+      rect:
+        serializedVersion: 2
+        x: 7196
+        y: 1
+        width: 27
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5200015, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dff43946b055bbe0800000000000000
+      internalID: -1462173760169377834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a13de869def18a442909a0498f614ed2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wind_SpriteSheet_attak 3_0: -4044078850726127060
+      wind_SpriteSheet_attak 3_1: -6064080255852623652
+      wind_SpriteSheet_attak 3_10: 2604558320778611881
+      wind_SpriteSheet_attak 3_11: -5649609418215753291
+      wind_SpriteSheet_attak 3_12: -4168584876082115786
+      wind_SpriteSheet_attak 3_13: 8484031699819600418
+      wind_SpriteSheet_attak 3_14: 3647926557504064872
+      wind_SpriteSheet_attak 3_15: -5792077636815013047
+      wind_SpriteSheet_attak 3_16: -6299284911525155653
+      wind_SpriteSheet_attak 3_17: 329955328028517818
+      wind_SpriteSheet_attak 3_18: 3144060112892861903
+      wind_SpriteSheet_attak 3_19: 3720831532195589436
+      wind_SpriteSheet_attak 3_2: -8316271126761765433
+      wind_SpriteSheet_attak 3_20: 8633475146813792111
+      wind_SpriteSheet_attak 3_21: -4380532119854146634
+      wind_SpriteSheet_attak 3_22: 7892006263613440097
+      wind_SpriteSheet_attak 3_23: 2489555215509891859
+      wind_SpriteSheet_attak 3_24: -1210896719496837736
+      wind_SpriteSheet_attak 3_25: 5178715396205538357
+      wind_SpriteSheet_attak 3_26: 3974524154795973091
+      wind_SpriteSheet_attak 3_27: -6639965592285804644
+      wind_SpriteSheet_attak 3_28: 1330304683554731365
+      wind_SpriteSheet_attak 3_29: 7914135330499698246
+      wind_SpriteSheet_attak 3_3: 2461645930532835498
+      wind_SpriteSheet_attak 3_30: -8122050059149731448
+      wind_SpriteSheet_attak 3_31: 872577473022858941
+      wind_SpriteSheet_attak 3_32: -4899531205791552597
+      wind_SpriteSheet_attak 3_33: 5713739868484214866
+      wind_SpriteSheet_attak 3_34: -819495441691344035
+      wind_SpriteSheet_attak 3_35: -8499693939371689162
+      wind_SpriteSheet_attak 3_36: 3037745689018489086
+      wind_SpriteSheet_attak 3_37: -526468840241845675
+      wind_SpriteSheet_attak 3_38: 9113542143467496720
+      wind_SpriteSheet_attak 3_39: 7906192875000035588
+      wind_SpriteSheet_attak 3_4: -6570250560497939800
+      wind_SpriteSheet_attak 3_40: -3254961156053976706
+      wind_SpriteSheet_attak 3_41: -1462173760169377834
+      wind_SpriteSheet_attak 3_42: -2164973961778700275
+      wind_SpriteSheet_attak 3_43: 559604231199936815
+      wind_SpriteSheet_attak 3_44: 4246800727139127691
+      wind_SpriteSheet_attak 3_45: -7848146567063361499
+      wind_SpriteSheet_attak 3_46: 7036550947430385655
+      wind_SpriteSheet_attak 3_47: -4572978343557953637
+      wind_SpriteSheet_attak 3_48: 4157732500822240411
+      wind_SpriteSheet_attak 3_49: -771311058267730163
+      wind_SpriteSheet_attak 3_5: 8712161403763228176
+      wind_SpriteSheet_attak 3_50: 7551597837567319271
+      wind_SpriteSheet_attak 3_51: -9019926339515028996
+      wind_SpriteSheet_attak 3_52: -6291076828486344725
+      wind_SpriteSheet_attak 3_53: -7056560027060064947
+      wind_SpriteSheet_attak 3_54: -6609872256863534282
+      wind_SpriteSheet_attak 3_55: 8226550765335498375
+      wind_SpriteSheet_attak 3_6: -2267344951522851053
+      wind_SpriteSheet_attak 3_7: 7860749738675452505
+      wind_SpriteSheet_attak 3_8: 1885415314500807830
+      wind_SpriteSheet_attak 3_9: 4822379505035003557
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
