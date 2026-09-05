@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Player/Abilities/DubleJump")]
+
 public class DashSO : AbilitiesSO
 {
     public float DashForce;
