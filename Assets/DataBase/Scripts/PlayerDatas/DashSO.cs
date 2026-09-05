@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Player/Abilities/DubleJump")]
+[CreateAssetMenu(menuName = "Player/Abilities/Dash")]
 
 public class DashSO : AbilitiesSO
 {
