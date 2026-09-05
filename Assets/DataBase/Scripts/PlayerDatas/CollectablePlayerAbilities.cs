@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Abilities/CollectableAbilities")]
+[CreateAssetMenu(menuName = "Player/Abilities/CollectableAbilities")]
 public class CollectablePlayerAbilities : ScriptableObject
 {
     public bool isCanDashing;

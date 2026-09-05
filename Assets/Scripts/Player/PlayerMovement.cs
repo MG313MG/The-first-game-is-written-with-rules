@@ -147,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
                 _rigidBody2D.linearVelocity = new Vector2(0, _rigidBody2D.linearVelocity.y);
                 CurrentState = PlayerState.Idle;
             }
-            print(CurrentState);
+            //print(CurrentState);
         }
     }
     private void _theResetAttackLevel()
