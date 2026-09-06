@@ -1,15 +1,10 @@
 using System;
 using UnityEngine;
 
-public enum PlayerState { Idle, Walk, Jump, Fall, Dash, Attak , Defend, Hurt, Die}
-
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerInputController _playerInputController;
     private Rigidbody2D _rigidBody2D;
-
-    [Space(5)]
-    [Header("Player State")]
-    public PlayerState CurrentState;
 
     [Space(5)]
     [Header("Public Floats")]
@@ -53,13 +48,14 @@ public class PlayerMovement : MonoBehaviour
     private float _xScale;
     private int _attackLevel;
     private bool isAttackLevelReseted;
-    private bool isCanDoDifferentWork;
+
 
     public Action<float> DamagetoEnemy;
     public Action<PlayerState> SendState;
 
     void Start()
     {
+        _playerInputController = GetComponent<PlayerInputController>();
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _xScale = transform.localScale.x;
     }
@@ -68,9 +64,8 @@ public class PlayerMovement : MonoBehaviour
     {
         _theChangeFace();
         _theCheckDistance();
-        _theSetPlayerState();
-        if (CoolDownTime > 0)
-            _theCoolDownTimer();
+        //if (CoolDownTime > 0)
+        //    _theCoolDownTimer();
         if (isGrounded)
             _theSetAbilitiesToTrue();
         if (_attackLevel != 0 && !isAttackLevelReseted && CoolDownTime <= 0)
@@ -98,58 +93,7 @@ public class PlayerMovement : MonoBehaviour
         isWalled = Physics2D.Raycast(_wallDistanceCheckerGameObject.transform.position, Vector2.right * FaceDir, _checkWallDistance, _groundLayer);
         isOnAir = Physics2D.Raycast(transform.position, Vector2.down, _checkAirDistance, _groundLayer);
     }
-    private void _theSetPlayerState()
-    {
-        if(isCanDoDifferentWork)
-        {
-            if (isWalled)
-            {
-                if (isGrounded)
-                    CurrentState = PlayerState.Idle;
-                else
-                    CurrentState = PlayerState.Fall;
-            }
-            if (Input.GetMouseButtonDown(0) && _attackLevel < 4)
-            {
-                isAttackLevelReseted = false;
-                if (_attackLevel == 0)
-                    CoolDownTime = 1.7f;
-                else if (_attackLevel == 1)
-                    CoolDownTime = 3f;
-                else if (_attackLevel == 2)
-                    CoolDownTime = 3f;
-                else if (_attackLevel == 3)
-                    CoolDownTime = 1.1f;
-                if (isGrounded)
-                {
-                    _attackLevel += 1;
-                    print(_attackLevel);
-                }
-                CurrentState = PlayerState.Attak;
-            }
-            else if (Input.GetMouseButtonDown(1) && isCanDashing)
-            {
-                CurrentState = PlayerState.Dash;
-            }
-            else if (Input.GetKey(KeyCode.Space) && (isGrounded || isCanDubleJumping))
-                CurrentState = PlayerState.Jump;
-
-            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && isGrounded && !isWalled)
-                CurrentState = PlayerState.Walk;
-
-            else if (!isGrounded && CurrentState != PlayerState.Attak)
-            {
-                _rigidBody2D.linearVelocity = new Vector2(0, _rigidBody2D.linearVelocity.y);
-                CurrentState = PlayerState.Fall;
-            }
-            else if (!isAnyInput() && isGrounded)
-            {
-                _rigidBody2D.linearVelocity = new Vector2(0, _rigidBody2D.linearVelocity.y);
-                CurrentState = PlayerState.Idle;
-            }
-            //print(CurrentState);
-        }
-    }
+    
     private void _theResetAttackLevel()
     {
         _attackLevel = 0;
@@ -161,87 +105,46 @@ public class PlayerMovement : MonoBehaviour
         isCanDashing = true;
     }
 
-    void FixedUpdate()
-    {
-        _theSwitchOnPlayerStates();
-    }
-
-    private void _theSwitchOnPlayerStates()
-    {
-        switch (CurrentState)
-        {
-            case PlayerState.Idle:
-                isCanDoDifferentWork = true;
-                _theIdle();
-                break;
-
-            case PlayerState.Walk:
-                isCanDoDifferentWork = true;
-                _theWalk();
-                break;
-
-            case PlayerState.Jump:
-                isCanDoDifferentWork = true;
-                CoolDownTime = 1;
-                _theJump();
-                break;
-
-            case PlayerState.Fall:
-                isCanDoDifferentWork = true;
-                _theFall();
-                break;
-
-            case PlayerState.Dash:
-                isCanDoDifferentWork = false;
-                _theDash();
-                break;
-            case PlayerState.Attak:
-                isCanDoDifferentWork = true;
-                _theAttak();
-                break;
-            case PlayerState.Defend:
-                isCanDoDifferentWork = false;
-                _theDefend();
-                break;
-        }
-    }
+    
 
     //MovementMods
-    private void _theIdle()
+    public void TheIdle()
     {
         _rigidBody2D.linearVelocity = Vector2.zero;
     }
 
-    private void _theWalk()
+    public void TheWalk()
     {
         _rigidBody2D.linearVelocity = new Vector2(MoveSpeed * FaceDir, _rigidBody2D.linearVelocity.y);
     }
-    private void _theJump()
+    public void TheJump()
     {
         if (isGrounded)
         {
             _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, JumpSpeed);
-            CurrentState = PlayerState.Fall;
+            _playerInputController.CurrentState = PlayerState.Fall;
             return;
         }
         else if (isCanDubleJumping)
         {
             _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, JumpSpeed);
             isCanDubleJumping = false;
-            CurrentState = PlayerState.Fall;
+            _playerInputController.CurrentState = PlayerState.Fall;
         }
     }
 
-    private void _theFall()
+    public void TheFall()
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
             _rigidBody2D.linearVelocity = new Vector2(MoveSpeed * FaceDir, _rigidBody2D.linearVelocity.y);
-        if (_rigidBody2D.linearVelocity.y > 0) { }
+        if (_rigidBody2D.linearVelocity.y > 0) { 
+        //Do nothing
+        }
         else
             if (isGrounded)
-                CurrentState = PlayerState.Idle;
+                _playerInputController.CurrentState = PlayerState.Idle;
     }
-    private void _theDash()
+    public void TheDash()
     {
         if (isCanDashing)
         {
@@ -249,38 +152,23 @@ public class PlayerMovement : MonoBehaviour
             _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, 0);
         }
     }
-    private void _theAttak()
+    public void TheAttak()
     {
 
     }
-    private void _theDefend()
+    public void TheDefend()
     {
 
     }
 
-    private bool isAnyInput()
-    {
-        if (CurrentState == PlayerState.Attak)
-            return true;
-        if (Input.anyKey)
-            return true;
-
-        if (Input.GetMouseButton(0) ||
-            Input.GetMouseButton(1) ||
-            Input.GetMouseButton(2))
-            return true;
-
-        return false;
-    }
-
-    private void _theCoolDownTimer()
+    public void TheCoolDownTimer()
     {
             CoolDownTime -= Time.deltaTime;
     }
 
     public void TheResetCanDoDifferentWork()
     {
-        isCanDoDifferentWork = true;
+        _playerInputController.isCanDoDifferentWork = true;
     }
 
     //Draw the raycast line

@@ -1733,6 +1733,7 @@ GameObject:
   - component: {fileID: 1479755518}
   - component: {fileID: 1479755517}
   - component: {fileID: 1479755519}
+  - component: {fileID: 1479755520}
   - component: {fileID: 1479755516}
   - component: {fileID: 1479755515}
   m_Layer: 0
@@ -1894,8 +1895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77679bce08695b947a3029741c93e3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  CurrentState: 0
-  CoolDownTimer: 0
+  CoolDownTime: 0
   MoveSpeed: 5
   JumpSpeed: 20
   FaceDir: 1
@@ -1915,6 +1915,21 @@ MonoBehaviour:
   _tornado: {fileID: 0}
   _tornadoSP: {fileID: 0}
   _tornadoCostStamina: 0
+--- !u!114 &1479755520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479755514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3eed125410103e42abe500e64859be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInputController
+  _collectableAbilities: {fileID: 11400000, guid: 3b44ce9de53347f4199b52525507a73c, type: 2}
+  CurrentState: 0
+  isCanDoDifferentWork: 0
 --- !u!1 &1494844449
 GameObject:
   m_ObjectHideFlags: 0
