@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DubleJumpSO
   AbilityName: 
   StaminaCost: 0
-  CoolDownTime: 0
+  CoolDownTime: 0.8413375
   isActivated: 0
-  ActivateTime: 0
+  ActivateTime: 1

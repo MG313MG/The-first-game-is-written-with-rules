@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6720b76d491a7ff4c9cbd6c65f657091, type: 3}
   m_Name: Collectable Player Abilities
   m_EditorClassIdentifier: Assembly-CSharp::CollectablePlayerAbilities
-  isCanDashing: 0
-  isCanDubleJumping: 0
-  isCanTornadoAttacking: 0
+  isCanDashing: 1
+  isCanDubleJumping: 1
+  isCanTornadoAttacking: 1
