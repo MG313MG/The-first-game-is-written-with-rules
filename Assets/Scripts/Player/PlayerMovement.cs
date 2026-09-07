@@ -1,10 +1,14 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     private PlayerInputController _playerInputController;
     private Rigidbody2D _rigidBody2D;
+
+    [Header("Scriptable objects")]
+    private CollectablePlayerAbilities _collectedPlayerAbilities;
 
     [Space(5)]
     [Header("Public Floats")]
@@ -13,11 +17,6 @@ public class PlayerMovement : MonoBehaviour
     public float JumpSpeed;
     public float FaceDir;
     public float Damage;
-
-    [Space(5)]
-    [Header("Public Bools")]
-    public bool isCanDubleJumping;
-    public bool isCanDashing;
 
     [Space(5)]
     [Header("Bool of Distances")]
@@ -64,10 +63,8 @@ public class PlayerMovement : MonoBehaviour
     {
         _theChangeFace();
         _theCheckDistance();
-        //if (CoolDownTime > 0)
-        //    _theCoolDownTimer();
         if (isGrounded)
-            _theSetAbilitiesToTrue();
+            _collectedPlayerAbilities.The_Set_Movement_To_True();
         if (_attackLevel != 0 && !isAttackLevelReseted && CoolDownTime <= 0)
             _theResetAttackLevel();
     }
@@ -99,11 +96,7 @@ public class PlayerMovement : MonoBehaviour
         _attackLevel = 0;
         isAttackLevelReseted = true;
     }
-    private void _theSetAbilitiesToTrue()
-    {
-        isCanDubleJumping = true;
-        isCanDashing = true;
-    }
+    
 
     
 
@@ -125,10 +118,10 @@ public class PlayerMovement : MonoBehaviour
             _playerInputController.CurrentState = PlayerState.Fall;
             return;
         }
-        else if (isCanDubleJumping)
+        else if (_collectedPlayerAbilities.isCanDubleJumping)
         {
             _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, JumpSpeed);
-            isCanDubleJumping = false;
+            _collectedPlayerAbilities.isCanDubleJumping = false;
             _playerInputController.CurrentState = PlayerState.Fall;
         }
     }
@@ -146,9 +139,9 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TheDash()
     {
-        if (isCanDashing)
+        if (_collectedPlayerAbilities.isCanDashing)
         {
-            isCanDashing = false;
+            _collectedPlayerAbilities.isCanDashing = false;
             _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, 0);
         }
     }
