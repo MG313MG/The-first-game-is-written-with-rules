@@ -5,7 +5,7 @@ public enum PlayerState { Idle, Walk, Jump, Fall, Dash, Attak, Defend, Hurt, Die
 public class PlayerInputController : MonoBehaviour
 {
     public CollectablePlayerAbilities _collectableAbilities;
-    private PlayerMovement _movement;
+    private PlayerMovement _playerMovement;
 
     private PlayerAttackAndDefend _attackAndDefend;
 
@@ -16,7 +16,8 @@ public class PlayerInputController : MonoBehaviour
 
     private void Start()
     {
-        _movement = GetComponent<PlayerMovement>();
+        _playerMovement = GetComponent<PlayerMovement>();
+        _attackAndDefend = GetComponent<PlayerAttackAndDefend>();
     }
 
     private void Update()
@@ -27,47 +28,36 @@ public class PlayerInputController : MonoBehaviour
     {
         if (isCanDoDifferentWork)
         {
-            if (_movement.isWalled)
+            if (_playerMovement.isWalled)
             {
-                if (_movement.isGrounded)
+                if (_playerMovement.isGrounded)
                     CurrentState = PlayerState.Idle;
                 else
                     CurrentState = PlayerState.Fall;
             }
-            if (Input.GetMouseButtonDown(0))
-            {/*
-                 && _attackLevel < 4
-                isAttackLevelReseted = false;
-                if (_attackLevel == 0)
-                    CoolDownTime = 1.7f;
-                else if (_attackLevel == 1)
-                    CoolDownTime = 3f;
-                else if (_attackLevel == 2)
-                    CoolDownTime = 3f;
-                else if (_attackLevel == 3)
-                    CoolDownTime = 1.1f;
-                if (isGrounded)
+            if (Input.GetMouseButtonDown(0) && _attackAndDefend.AttackLevel < 4)
+            {
+                if (_playerMovement.isGrounded)
                 {
-                    _attackLevel += 1;
-                    print(_attackLevel);
-                }*/
+                    _attackAndDefend.TheAttak();
+                }
                 CurrentState = PlayerState.Attak;
             }
             else if (Input.GetMouseButtonDown(1) && _collectableAbilities.isCanDashing)
             {
                 CurrentState = PlayerState.Dash;
             }
-            else if (Input.GetKey(KeyCode.Space) && (_movement.isGrounded || _collectableAbilities.isCanDubleJumping))
+            else if (Input.GetKey(KeyCode.Space) && (_playerMovement.isGrounded || _collectableAbilities.isCanDubleJumping))
                 CurrentState = PlayerState.Jump;
 
-            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && _movement.isGrounded && !_movement.isWalled)
+            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && _playerMovement.isGrounded && !_playerMovement.isWalled)
                 CurrentState = PlayerState.Walk;
 
-            else if (!_movement.isGrounded && CurrentState != PlayerState.Attak)
+            else if (!_playerMovement.isGrounded && CurrentState != PlayerState.Attak)
             {
                 CurrentState = PlayerState.Fall;
             }
-            else if (!isAnyInput() && _movement.isGrounded)
+            else if (!isAnyInput() && _playerMovement.isGrounded)
             {
                 Rigidbody2D _rigidBody2D = GetComponent<Rigidbody2D>();
                 _rigidBody2D.linearVelocity = new Vector2(0, _rigidBody2D.linearVelocity.y);
@@ -87,36 +77,35 @@ public class PlayerInputController : MonoBehaviour
         {
             case PlayerState.Idle:
                 isCanDoDifferentWork = true;
-                _movement.TheIdle();
+                _playerMovement.TheIdle();
                 break;
 
             case PlayerState.Walk:
                 isCanDoDifferentWork = true;
-                _movement.TheWalk();
+                _playerMovement.TheWalk();
                 break;
 
             case PlayerState.Jump:
                 isCanDoDifferentWork = true;
                 //CoolDownTime = 1;
-                _movement.TheJump();
+                _playerMovement.TheJump();
                 break;
 
             case PlayerState.Fall:
                 isCanDoDifferentWork = true;
-                _movement.TheFall();
+                _playerMovement.TheFall();
                 break;
 
             case PlayerState.Dash:
                 isCanDoDifferentWork = false;
-                _movement.TheDash();
+                _playerMovement.TheDash();
                 break;
             case PlayerState.Attak:
                 isCanDoDifferentWork = true;
-                _attackAndDefend.TheAttak();
                 break;
             case PlayerState.Defend:
                 isCanDoDifferentWork = false;
-                //_movement.TheDefend();
+                //_playerMovement.TheDefend();
                 break;
         }
     }

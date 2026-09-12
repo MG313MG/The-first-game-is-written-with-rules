@@ -1732,6 +1732,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479755518}
   - component: {fileID: 1479755517}
+  - component: {fileID: 1479755522}
   - component: {fileID: 1479755519}
   - component: {fileID: 1479755520}
   - component: {fileID: 1479755521}
@@ -1946,6 +1947,20 @@ MonoBehaviour:
   abilities:
   - {fileID: 11400000, guid: 93e0f6f22ceb9454db2b63e81aafe0d4, type: 2}
   - {fileID: 11400000, guid: de51694ade7d91a4ca0c6d9e0ca851f2, type: 2}
+--- !u!114 &1479755522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479755514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef2956e8dd00ff49bed87820bb07224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackAndDefend
+  _collectedAbilities: {fileID: 11400000, guid: 3b44ce9de53347f4199b52525507a73c, type: 2}
+  AttackLevel: 0
 --- !u!1 &1494844449
 GameObject:
   m_ObjectHideFlags: 0

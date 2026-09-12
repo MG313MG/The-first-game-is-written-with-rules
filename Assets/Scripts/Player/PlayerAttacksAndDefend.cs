@@ -6,6 +6,9 @@ public class PlayerAttackAndDefend : MonoBehaviour
     private CollectablePlayerAbilities _collectedAbilities;
     private PlayerMovement _playerMovement;
     public float AttackLevel;
+    [SerializeField]
+    private float _comboTimer;
+
     void Start()
     {
         _playerMovement = GetComponent<PlayerMovement>();
@@ -13,36 +16,32 @@ public class PlayerAttackAndDefend : MonoBehaviour
 
     void Update()
     {
-        
+        if (_comboTimer > 0)
+        {
+            _comboTimer -= Time.deltaTime;
+            if (_comboTimer <= 0)
+                AttackLevel = 0;
+        }
     }
     public void TheAttak()
     {
-        if (!_playerMovement.isGrounded && _playerMovement.isOnAir)
+        if(_playerMovement.isOnAir)
         {
+            AttackLevel = 4;
             Debug.Log($"Attack Level : {AttackLevel}");
-        }
-        else if (!_playerMovement.isGrounded && !_playerMovement.isOnAir)
-        {
-            Debug.Log($"Attack Level : {AttackLevel}");
-        }
-        else if (_playerMovement.isGrounded)
-        {
-            if (AttackLevel == 1)
-            { 
-                Debug.Log($"Attack Level : {AttackLevel}");
-            }
-            else if (AttackLevel == 2)
-            {
-                Debug.Log($"Attack Level : {AttackLevel}");
-            }
-            else if (AttackLevel == 3 && _collectedAbilities.isCanTornadoAttacking)
-            {   
-                Debug.Log($"Attack Level : {AttackLevel}");
-            }
-            else
-            { 
-                Debug.Log($"Attack Level : {AttackLevel}");
-            }
-        }
+            return;
+        }    
+        if (AttackLevel >= 3)
+            AttackLevel = 0;
+        AttackLevel++;
+
+        if (AttackLevel == 1)
+            _comboTimer = 1.7f;
+        else if (AttackLevel == 2)
+            _comboTimer = 3f;
+        else if (AttackLevel == 3)
+            _comboTimer = 1.1f;
+
+        Debug.Log($"Attack Level : {AttackLevel}");
     }
 }
