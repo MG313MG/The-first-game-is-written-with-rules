@@ -72,11 +72,10 @@ public class PlayerMovement : MonoBehaviour
             _theResetAttackLevel();
     }
 
-
+    //This function must defind in player input controller
     private void _theChangeFace()
     {
         int move = 0;
-
         if (Input.GetKey(KeyCode.D))
             move = 1;
         else if (Input.GetKey(KeyCode.A))
@@ -87,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         if (FaceDir != transform.localScale.x)
             transform.localScale = new Vector3(_xScale * FaceDir, transform.localScale.y, transform.localScale.z);
     }
+    //This function must defind in new script with name player position
     private void _theCheckDistance()
     {
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, _checkGroundDistance, _groundLayer);
@@ -99,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
         _attackLevel = 0;
         isAttackLevelReseted = true;
     }
+    //This function must defind in ability manager and optimize with it
     private void _theSetAbilitiesToTrue()
     {
         isCanDubleJumping = true;
@@ -132,7 +133,6 @@ public class PlayerMovement : MonoBehaviour
             _playerInputController.CurrentState = PlayerState.Fall;
         }
     }
-
     public void TheFall()
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
@@ -152,15 +152,6 @@ public class PlayerMovement : MonoBehaviour
             _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, 0);
         }
     }
-    public void TheAttak()
-    {
-
-    }
-    public void TheDefend()
-    {
-
-    }
-
     public void TheCoolDownTimer()
     {
             CoolDownTime -= Time.deltaTime;

@@ -7,6 +7,8 @@ public class PlayerInputController : MonoBehaviour
     public CollectablePlayerAbilities _collectableAbilities;
     private PlayerMovement _movement;
 
+    private PlayerAttackAndDefend _attackAndDefend;
+
     [Space(5)]
     [Header("Player State")]
     public PlayerState CurrentState;
@@ -110,7 +112,7 @@ public class PlayerInputController : MonoBehaviour
                 break;
             case PlayerState.Attak:
                 isCanDoDifferentWork = true;
-                //_movement.TheAttak();
+                _attackAndDefend.TheAttak();
                 break;
             case PlayerState.Defend:
                 isCanDoDifferentWork = false;
