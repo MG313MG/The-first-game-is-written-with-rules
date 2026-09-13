@@ -43,6 +43,11 @@ public class PlayerInputController : MonoBehaviour
                 }
                 CurrentState = PlayerState.Attak;
             }
+            else if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                _attackAndDefend.TheDefend();
+                CurrentState = PlayerState.Defend;
+            }
             else if (Input.GetMouseButtonDown(1) && _collectableAbilities.isCanDashing)
             {
                 CurrentState = PlayerState.Dash;
@@ -105,7 +110,6 @@ public class PlayerInputController : MonoBehaviour
                 break;
             case PlayerState.Defend:
                 isCanDoDifferentWork = false;
-                //_playerMovement.TheDefend();
                 break;
         }
     }

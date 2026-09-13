@@ -41,7 +41,16 @@ public class PlayerAttackAndDefend : MonoBehaviour
             _comboTimer = 3f;
         else if (AttackLevel == 3)
             _comboTimer = 1.1f;
-
-        Debug.Log($"Attack Level : {AttackLevel}");
+    }
+    public void TheDefend()
+    {
+        if (_playerMovement.isGrounded)
+        {
+            //Play the air defense animation
+        }
+        else
+        {
+            //Play the ground defense aniation 
+        }
     }
 }
