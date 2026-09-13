@@ -20,26 +20,6 @@ public class PlayerMovement : MonoBehaviour
     public bool isCanDashing;
 
     [Space(5)]
-    [Header("Bool of Distances")]
-    public bool isOnAir;
-    public bool isWalled;
-    public bool isGrounded;
-
-    [Space(5)]
-    [Header("Layers")]
-    [SerializeField] private LayerMask _groundLayer;
-
-    [Space(5)]
-    [Header("Float of Distances")]
-    [SerializeField] private float _checkAirDistance;
-    [SerializeField] private float _checkWallDistance;
-    [SerializeField] private float _checkGroundDistance;
-
-    [Space(5)]
-    [Header("Game objects for check distances")]
-    [SerializeField] private GameObject _wallDistanceCheckerGameObject;
-
-    [Space(5)]
     [Header("Tornado")]
     [SerializeField] private GameObject _tornado;
     [SerializeField] private GameObject _tornadoSP;
@@ -68,8 +48,6 @@ public class PlayerMovement : MonoBehaviour
         //    _theCoolDownTimer();
         if (isGrounded)
             _theSetAbilitiesToTrue();
-        if (_attackLevel != 0 && !isAttackLevelReseted && CoolDownTime <= 0)
-            _theResetAttackLevel();
     }
 
     //This function must defind in player input controller
@@ -85,13 +63,6 @@ public class PlayerMovement : MonoBehaviour
             FaceDir = (int)Mathf.Sign(move);
         if (FaceDir != transform.localScale.x)
             transform.localScale = new Vector3(_xScale * FaceDir, transform.localScale.y, transform.localScale.z);
-    }
-    //This function must defind in new script with name player position
-    private void _theCheckDistance()
-    {
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, _checkGroundDistance, _groundLayer);
-        isWalled = Physics2D.Raycast(_wallDistanceCheckerGameObject.transform.position, Vector2.right * FaceDir, _checkWallDistance, _groundLayer);
-        isOnAir = Physics2D.Raycast(transform.position, Vector2.down, _checkAirDistance, _groundLayer);
     }
     
     private void _theResetAttackLevel()

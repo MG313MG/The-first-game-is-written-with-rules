@@ -1733,6 +1733,7 @@ GameObject:
   - component: {fileID: 1479755518}
   - component: {fileID: 1479755517}
   - component: {fileID: 1479755522}
+  - component: {fileID: 1479755523}
   - component: {fileID: 1479755519}
   - component: {fileID: 1479755520}
   - component: {fileID: 1479755521}
@@ -1961,6 +1962,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackAndDefend
   _collectedAbilities: {fileID: 11400000, guid: 3b44ce9de53347f4199b52525507a73c, type: 2}
   AttackLevel: 0
+  _comboTimer: 0
+--- !u!114 &1479755523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479755514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae041ea31511201469d739057fa3618e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerPositionSaver
+  isOnAir: 0
+  isWalled: 0
+  isGrounded: 0
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  _checkAirDistance: 0
+  _checkWallDistance: 0
+  _checkGroundDistance: 0
+  _wallDistanceCheckerGameObject: {fileID: 0}
+  LastPositionOnTheGround: {x: 0, y: 0, z: 0}
 --- !u!1 &1494844449
 GameObject:
   m_ObjectHideFlags: 0
