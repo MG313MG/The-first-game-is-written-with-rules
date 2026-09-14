@@ -6,7 +6,7 @@ public class PlayerInputController : MonoBehaviour
 {
     public CollectablePlayerAbilities _collectableAbilities;
     private PlayerMovement _playerMovement;
-
+    private PlayerPosition _playerPosition;
     private PlayerAttackAndDefend _attackAndDefend;
 
     [Space(5)]
@@ -17,6 +17,7 @@ public class PlayerInputController : MonoBehaviour
     private void Start()
     {
         _playerMovement = GetComponent<PlayerMovement>();
+        _playerPosition = GetComponent<PlayerPosition>();
         _attackAndDefend = GetComponent<PlayerAttackAndDefend>();
     }
 
@@ -28,16 +29,16 @@ public class PlayerInputController : MonoBehaviour
     {
         if (isCanDoDifferentWork)
         {
-            if (_playerMovement.isWalled)
+            if (_playerPosition.isWalled)
             {
-                if (_playerMovement.isGrounded)
+                if (_playerPosition.isGrounded)
                     CurrentState = PlayerState.Idle;
                 else
                     CurrentState = PlayerState.Fall;
             }
             if (Input.GetMouseButtonDown(0) && _attackAndDefend.AttackLevel < 4)
             {
-                if (_playerMovement.isGrounded)
+                if (_playerPosition.isGrounded)
                 {
                     _attackAndDefend.TheAttak();
                 }
@@ -52,17 +53,17 @@ public class PlayerInputController : MonoBehaviour
             {
                 CurrentState = PlayerState.Dash;
             }
-            else if (Input.GetKey(KeyCode.Space) && (_playerMovement.isGrounded || _collectableAbilities.isCanDubleJumping))
+            else if (Input.GetKey(KeyCode.Space) && (_playerPosition.isGrounded || _collectableAbilities.isCanDubleJumping))
                 CurrentState = PlayerState.Jump;
 
-            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && _playerMovement.isGrounded && !_playerMovement.isWalled)
+            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && _playerPosition.isGrounded && !_playerPosition.isWalled)
                 CurrentState = PlayerState.Walk;
 
-            else if (!_playerMovement.isGrounded && CurrentState != PlayerState.Attak)
+            else if (!_playerPosition.isGrounded && CurrentState != PlayerState.Attak)
             {
                 CurrentState = PlayerState.Fall;
             }
-            else if (!isAnyInput() && _playerMovement.isGrounded)
+            else if (!isAnyInput() && _playerPosition.isGrounded)
             {
                 Rigidbody2D _rigidBody2D = GetComponent<Rigidbody2D>();
                 _rigidBody2D.linearVelocity = new Vector2(0, _rigidBody2D.linearVelocity.y);

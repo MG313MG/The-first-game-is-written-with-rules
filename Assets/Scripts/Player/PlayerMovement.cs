@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private PlayerPosition _playerPosition;
     private PlayerInputController _playerInputController;
     private Rigidbody2D _rigidBody2D;
 
@@ -26,15 +27,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _tornadoCostStamina;
 
     private float _xScale;
-    private int _attackLevel;
-    private bool isAttackLevelReseted;
-
 
     public Action<float> DamagetoEnemy;
     public Action<PlayerState> SendState;
 
     void Start()
     {
+        _playerPosition = GetComponent<PlayerPosition>();
         _playerInputController = GetComponent<PlayerInputController>();
         _rigidBody2D = GetComponent<Rigidbody2D>();
         _xScale = transform.localScale.x;
@@ -43,11 +42,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         _theChangeFace();
-        _theCheckDistance();
-        //if (CoolDownTime > 0)
-        //    _theCoolDownTimer();
-        if (isGrounded)
-            _theSetAbilitiesToTrue();
     }
 
     //This function must defind in player input controller
@@ -65,11 +59,6 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(_xScale * FaceDir, transform.localScale.y, transform.localScale.z);
     }
     
-    private void _theResetAttackLevel()
-    {
-        _attackLevel = 0;
-        isAttackLevelReseted = true;
-    }
     //This function must defind in ability manager and optimize with it
     private void _theSetAbilitiesToTrue()
     {
@@ -91,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TheJump()
     {
-        if (isGrounded)
+        if (_playerPosition.isGrounded)
         {
             _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, JumpSpeed);
             _playerInputController.CurrentState = PlayerState.Fall;
@@ -112,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
         //Do nothing
         }
         else
-            if (isGrounded)
+            if (_playerPosition.isGrounded)
                 _playerInputController.CurrentState = PlayerState.Idle;
     }
     public void TheDash()
@@ -133,15 +122,5 @@ public class PlayerMovement : MonoBehaviour
         _playerInputController.isCanDoDifferentWork = true;
     }
 
-    //Draw the raycast line
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - _checkGroundDistance, transform.position.z));
-        Gizmos.color = Color.gray;
-        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - _checkAirDistance, transform.position.z));
-        Gizmos.color = Color.green;
-        Gizmos.DrawLine(_wallDistanceCheckerGameObject.transform.position, new Vector3(_wallDistanceCheckerGameObject.transform.position.x + (_checkWallDistance * FaceDir), _wallDistanceCheckerGameObject.transform.position.y, _wallDistanceCheckerGameObject.transform.position.z));
-    }
 }
 

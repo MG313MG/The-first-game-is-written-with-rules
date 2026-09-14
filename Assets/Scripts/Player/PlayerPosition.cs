@@ -1,18 +1,21 @@
+using Unity.VectorGraphics;
 using UnityEngine;
 
 public class PlayerPosition : MonoBehaviour
 {
+    [SerializeField]
     private PlayerMovement _playerMovement;
+    [SerializeField] 
+    private AbilityManager _abilityManager;
 
-    [Header("")]
-    public Vector3 LastPositionOnTheGround;
-    public Vector3 RespawnPointSet;
+    [Header("Positions")]
+    public Vector3 LastPositionOnTheGround { get; private set; }
+    public Vector3 RespawnPointSet { get; private set; }
 
-    [Space(5)]
     [Header("Bool of Distances")]
-    public bool isOnAir;
-    public bool isWalled;
-    public bool isGrounded;
+    public bool isOnAir { get; private set; }
+    public bool isWalled { get; private set; }
+    public bool isGrounded { get; private set; }
 
     [Space(5)]
     [Header("Layers")]
@@ -20,7 +23,6 @@ public class PlayerPosition : MonoBehaviour
 
     [Space(5)]
     [Header("Float of Distances")]
-    [SerializeField] private float _checkAirDistance;
     [SerializeField] private float _checkWallDistance;
     [SerializeField] private float _checkGroundDistance;
 
@@ -31,14 +33,17 @@ public class PlayerPosition : MonoBehaviour
 
     void Start()
     {
-        _playerMovement = GetComponent<PlayerMovement>();
         _playerInputController = GetComponent<PlayerInputController>();
     }
 
     void Update()
     {
         _theCheckDistance();
-        if(_playerInputController.CurrentState == PlayerState.Jump && LastPositionOnTheGround == Vector3.zero)
+        if (!isGrounded)
+            isOnAir = true;
+        else 
+            isOnAir = false;
+        if(!isGrounded && LastPositionOnTheGround == Vector3.zero)
         {
             LastPositionOnTheGround = transform.position;
         }
@@ -47,10 +52,21 @@ public class PlayerPosition : MonoBehaviour
             LastPositionOnTheGround = Vector3.zero;
         }
     }
+    public void SetRespawnPoint(Vector3 point, Scene sceneOfRespawnPointSet)
+    {
+        RespawnPointSet = point;
+    }
     private void _theCheckDistance()
     {
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, _checkGroundDistance, _groundLayer);
-        isWalled = Physics2D.Raycast(_wallDistanceCheckerGameObject.transform.position, Vector2.right * _playerMovement.FaceDir, _checkWallDistance, _groundLayer);
-        isOnAir = Physics2D.Raycast(transform.position, Vector2.down, _checkAirDistance, _groundLayer);
+        isWalled = Physics2D.Raycast(_wallDistanceCheckerGameObject.transform.position, Vector2.right * _playerMovement.FaceDir, _checkWallDistance, _groundLayer);    }
+    //Draw the raycast line
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y - _checkGroundDistance, transform.position.z));
+        Gizmos.color = Color.gray;
+        //Gizmos.DrawLine(_wallDistanceCheckerGameObject.transform.position, new Vector3(_wallDistanceCheckerGameObject.transform.position.x + (_checkWallDistance * _playerMovement.FaceDir), _wallDistanceCheckerGameObject.transform.position.y, _wallDistanceCheckerGameObject.transform.position.z));
+        Gizmos.DrawLine(_wallDistanceCheckerGameObject.transform.position, new Vector3(_wallDistanceCheckerGameObject.transform.position.x + (_checkWallDistance * _playerMovement.FaceDir), _wallDistanceCheckerGameObject.transform.position.y, _wallDistanceCheckerGameObject.transform.position.z));
     }
 }

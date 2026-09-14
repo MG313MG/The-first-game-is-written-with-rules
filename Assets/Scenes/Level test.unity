@@ -1716,7 +1716,7 @@ Transform:
   m_GameObject: {fileID: 1379338867}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.106, y: 0.004, z: 0}
+  m_LocalPosition: {x: 0.106000006, y: 0.004000008, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1905,16 +1905,6 @@ MonoBehaviour:
   Damage: 0
   isCanDubleJumping: 1
   isCanDashing: 0
-  isOnAir: 0
-  isWalled: 0
-  isGrounded: 0
-  _groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  _checkAirDistance: 0
-  _checkWallDistance: 0.6
-  _checkGroundDistance: 1.08
-  _wallDistanceCheckerGameObject: {fileID: 1379338867}
   _tornado: {fileID: 0}
   _tornadoSP: {fileID: 0}
   _tornadoCostStamina: 0
@@ -1975,17 +1965,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae041ea31511201469d739057fa3618e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerPositionSaver
+  _playerMovement: {fileID: 1479755519}
+  LastPositionOnTheGround: {x: 0, y: 0, z: 0}
+  RespawnPointSet: {x: 0, y: 0, z: 0}
   isOnAir: 0
   isWalled: 0
   isGrounded: 0
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   _checkAirDistance: 0
-  _checkWallDistance: 0
-  _checkGroundDistance: 0
-  _wallDistanceCheckerGameObject: {fileID: 0}
-  LastPositionOnTheGround: {x: 0, y: 0, z: 0}
+  _checkWallDistance: 0.8
+  _checkGroundDistance: 1.05
+  _wallDistanceCheckerGameObject: {fileID: 1379338867}
 --- !u!1 &1494844449
 GameObject:
   m_ObjectHideFlags: 0

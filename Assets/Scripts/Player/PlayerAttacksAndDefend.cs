@@ -5,6 +5,7 @@ public class PlayerAttackAndDefend : MonoBehaviour
     [SerializeField]
     private CollectablePlayerAbilities _collectedAbilities;
     private PlayerMovement _playerMovement;
+    private PlayerPosition _playerPosition;
     public float AttackLevel;
     [SerializeField]
     private float _comboTimer;
@@ -12,6 +13,7 @@ public class PlayerAttackAndDefend : MonoBehaviour
     void Start()
     {
         _playerMovement = GetComponent<PlayerMovement>();
+        _playerPosition = GetComponent<PlayerPosition>();
     }
 
     void Update()
@@ -25,9 +27,10 @@ public class PlayerAttackAndDefend : MonoBehaviour
     }
     public void TheAttak()
     {
-        if(_playerMovement.isOnAir)
+        if(_playerPosition.isOnAir)
         {
             AttackLevel = 4;
+            _comboTimer = 1.1f;
             Debug.Log($"Attack Level : {AttackLevel}");
             return;
         }    
@@ -44,7 +47,7 @@ public class PlayerAttackAndDefend : MonoBehaviour
     }
     public void TheDefend()
     {
-        if (_playerMovement.isGrounded)
+        if (_playerPosition.isGrounded)
         {
             //Play the air defense animation
         }
