@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public enum PlayerState { Idle, Walk, Jump, Fall, Dash, Attak, Defend, Hurt, Die }
 
@@ -12,8 +13,12 @@ public class PlayerInputController : MonoBehaviour
     [Space(5)]
     [Header("Player State")]
     public PlayerState CurrentState;
+    [SerializeField]
+    private PlayerState _lastState;
+
     public bool isCanDoDifferentWork;
 
+    public Action<PlayerState> SendState;
     private void Start()
     {
         _playerMovement = GetComponent<PlayerMovement>();
@@ -24,6 +29,7 @@ public class PlayerInputController : MonoBehaviour
     private void Update()
     {
         _theSetPlayerState();
+        _theStateSender();
     }
     private void _theSetPlayerState()
     {
@@ -128,5 +134,16 @@ public class PlayerInputController : MonoBehaviour
             return true;
 
         return false;
+    }
+
+    private void _theStateSender()
+    {
+        if (_lastState != CurrentState)
+        {
+            Debug.Log(_lastState);
+            _lastState = CurrentState;
+            Debug.Log(CurrentState);
+            SendState?.Invoke(CurrentState);
+        }
     }
 }
