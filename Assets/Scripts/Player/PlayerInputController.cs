@@ -42,12 +42,9 @@ public class PlayerInputController : MonoBehaviour
                 else
                     CurrentState = PlayerState.Fall;
             }
-            if (Input.GetMouseButtonDown(0) && _attackAndDefend.AttackLevel < 4)
+            if (Input.GetMouseButtonDown(0) && _attackAndDefend.AttackLevel < 5)
             {
-                if (_playerPosition.isGrounded)
-                {
-                    _attackAndDefend.TheAttak();
-                }
+                _attackAndDefend.TheAttak();
                 CurrentState = PlayerState.Attak;
             }
             else if (Input.GetKeyDown(KeyCode.LeftControl))
@@ -113,7 +110,7 @@ public class PlayerInputController : MonoBehaviour
                 _playerMovement.TheDash();
                 break;
             case PlayerState.Attak:
-                isCanDoDifferentWork = true;
+                isCanDoDifferentWork = false;
                 break;
             case PlayerState.Defend:
                 isCanDoDifferentWork = false;
@@ -140,9 +137,7 @@ public class PlayerInputController : MonoBehaviour
     {
         if (_lastState != CurrentState)
         {
-            Debug.Log(_lastState);
             _lastState = CurrentState;
-            Debug.Log(CurrentState);
             SendState?.Invoke(CurrentState);
         }
     }

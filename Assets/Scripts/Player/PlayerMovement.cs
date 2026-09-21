@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     private float _xScale;
 
     public Action<float> DamagetoEnemy;
-    public Action<PlayerState> SendState;
+    
 
     void Start()
     {
