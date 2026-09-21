@@ -27,7 +27,10 @@ public class PlayerAttackAndDefend : MonoBehaviour
             _comboTimer -= Time.deltaTime;
             if (_comboTimer <= 0)
                 AttackLevel = 0;
-        }
+        } 
+
+        if (_playerPosition.isGrounded && AttackLevel != 0)
+            AttackLevel = 0;
     }
     public void TheAttak()
     {
