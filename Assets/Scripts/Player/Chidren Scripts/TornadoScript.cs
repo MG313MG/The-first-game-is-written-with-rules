@@ -3,29 +3,35 @@ using UnityEngine;
 public class TornadoScript : MonoBehaviour
 {
     private Transform _transform;
+    [SerializeField]
     private PlayerMovement _playerMovement;
     private SpriteRenderer _spriteRenderer;
+    [Space(5)]
+    [Header("Tornado")]
+    [SerializeField] private GameObject _tornadoSpawnPoint;
+    [SerializeField] private float _tornadoCostStamina;
 
     [SerializeField]
-    private float _speed, _damage, _faceDir;
+    private float _speed, _damage;
     void Start()
     {
+        gameObject.transform.position = _tornadoSpawnPoint.transform.position;
         _transform = GetComponent<Transform>();
-        _playerMovement = FindAnyObjectByType<PlayerMovement>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
-        _faceDir = _playerMovement.FaceDir;
-        if (_faceDir != 0)
-            _spriteRenderer.flipX = _faceDir == -1;
     }
 
     void FixedUpdate()
     {
-        _transform.position = new Vector3(_transform.position.x + (_speed * _faceDir), _transform.position.y, _transform.position.z);
+        _transform.position = new Vector3(_transform.position.x + (_speed * _playerMovement.FaceDir), _transform.position.y, _transform.position.z);
     }
 
-    public void TheDestoryer()
+    public void TheDisabler()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        gameObject.transform.position = _tornadoSpawnPoint.transform.position;
+    }
+    public void TheEnabler()
+    {
+        gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

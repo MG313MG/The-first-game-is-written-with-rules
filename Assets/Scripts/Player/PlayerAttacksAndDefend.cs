@@ -3,6 +3,9 @@ using UnityEngine;
 public class PlayerAttackAndDefend : MonoBehaviour
 {
     [SerializeField]
+    private TornadoScript _tornadoScript;
+
+    [SerializeField]
     private CollectablePlayerAbilities _collectedAbilities;
     private PlayerMovement _playerMovement;
     private PlayerPosition _playerPosition;
@@ -12,6 +15,9 @@ public class PlayerAttackAndDefend : MonoBehaviour
 
     [SerializeField]
     private bool isPlayingSomeAttack;
+
+
+
 
     void Start()
     {
@@ -29,7 +35,7 @@ public class PlayerAttackAndDefend : MonoBehaviour
                 AttackLevel = 0;
         } 
 
-        if (_playerPosition.isGrounded && AttackLevel != 0)
+        if (_playerPosition.isGrounded && AttackLevel == 4)
             AttackLevel = 0;
     }
     public void TheAttak()
@@ -39,7 +45,6 @@ public class PlayerAttackAndDefend : MonoBehaviour
             isPlayingSomeAttack = true;
             if (!_playerPosition.isGrounded)
             {
-                Debug.Log("Worked");
                 AttackLevel = 4;
                 _comboTimer = 1.1f;
                 return;
@@ -55,9 +60,16 @@ public class PlayerAttackAndDefend : MonoBehaviour
                 else if (AttackLevel == 2)
                     _comboTimer = 3f;
                 else if (AttackLevel == 3)
+                {
                     _comboTimer = 1.1f;
+                    
+                }
             }
         }
+    }
+    public void TheSpawnTornado()
+    {
+        _tornadoScript.TheEnabler();
     }
     public void TheDefend()
     {

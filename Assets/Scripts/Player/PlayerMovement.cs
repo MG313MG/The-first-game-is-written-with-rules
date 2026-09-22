@@ -20,11 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isCanDubleJumping;
     public bool isCanDashing;
 
-    [Space(5)]
-    [Header("Tornado")]
-    [SerializeField] private GameObject _tornado;
-    [SerializeField] private GameObject _tornadoSP;
-    [SerializeField] private float _tornadoCostStamina;
+
 
     private float _xScale;
 
