@@ -2452,6 +2452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479755518}
   - component: {fileID: 1479755517}
+  - component: {fileID: 1479755529}
   - component: {fileID: 1479755527}
   - component: {fileID: 1479755528}
   - component: {fileID: 1479755522}
@@ -2811,6 +2812,20 @@ MonoBehaviour:
   _currentStamina: 10
   MaxStamina: 100
   _timeOfStaminaRechargerTimerMode: 3
+--- !u!114 &1479755529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479755514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0032df2dcdb1e1f45a6e56992198b325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthStaminaBarUI
+  _healthSlider: {fileID: 875929081}
+  _staminaSlider: {fileID: 1590368876}
 --- !u!1 &1494844449
 GameObject:
   m_ObjectHideFlags: 0
