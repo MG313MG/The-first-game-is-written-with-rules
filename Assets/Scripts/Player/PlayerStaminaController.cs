@@ -54,7 +54,7 @@ public class PlayerStaminaController : MonoBehaviour
         if (!isRechargeMode)
             yield return new WaitForSeconds(5);
         else
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
         TheStaminaRecharger(5);
     }
 }
