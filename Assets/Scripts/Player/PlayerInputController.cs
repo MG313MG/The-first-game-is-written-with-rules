@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 
-public enum PlayerState { Idle, Walk, Jump, Fall, Dash, Attak, Defend, Hurt, Die }
+public enum PlayerState { Idle, Walk, Jump, Fall, Dash, Attak, Defend, Heal, Hurt, Dead }
 
 public class PlayerInputController : MonoBehaviour
 {
@@ -113,6 +113,15 @@ public class PlayerInputController : MonoBehaviour
                 isCanDoDifferentWork = false;
                 break;
             case PlayerState.Defend:
+                isCanDoDifferentWork = false;
+                break;
+            case PlayerState.Heal:
+                isCanDoDifferentWork = false;
+                break;
+            case PlayerState.Hurt: 
+                isCanDoDifferentWork = false;
+                break;
+            case PlayerState.Dead:
                 isCanDoDifferentWork = false;
                 break;
         }
