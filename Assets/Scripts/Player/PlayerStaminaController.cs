@@ -9,6 +9,9 @@ public class PlayerStaminaController : MonoBehaviour
     private float _currentStamina;
     public float MaxStamina;
 
+    [SerializeField]
+    private float _timeOfStaminaRechargerTimerMode;
+
     public Action<float> StaminaSender;
 
     private bool isRechargeMode;
@@ -54,7 +57,7 @@ public class PlayerStaminaController : MonoBehaviour
         if (!isRechargeMode)
             yield return new WaitForSeconds(5);
         else
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(_timeOfStaminaRechargerTimerMode);
         TheStaminaRecharger(5);
     }
 }
