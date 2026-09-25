@@ -1764,6 +1764,7 @@ GameObject:
   - component: {fileID: 1479755518}
   - component: {fileID: 1479755517}
   - component: {fileID: 1479755527}
+  - component: {fileID: 1479755528}
   - component: {fileID: 1479755522}
   - component: {fileID: 1479755523}
   - component: {fileID: 1479755519}
@@ -2104,8 +2105,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be024a304c96674497311336c222dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthController
-  _currentHealth: 0
+  _currentHealth: 100
   MaxHealth: 100
+--- !u!114 &1479755528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479755514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f75010ce475d384d86c21e6b1c65519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStaminaController
+  _currentStamina: 10
+  MaxStamina: 100
 --- !u!1 &1494844449
 GameObject:
   m_ObjectHideFlags: 0
