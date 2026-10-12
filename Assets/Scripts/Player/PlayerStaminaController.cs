@@ -6,7 +6,7 @@ public class PlayerStaminaController : MonoBehaviour
 {
     [Header("Stamina")]
     [SerializeField]
-    private float _currentStamina;
+    public float CurrentStamina;
     public float MaxStamina;
 
     [SerializeField]
@@ -18,16 +18,16 @@ public class PlayerStaminaController : MonoBehaviour
 
     void Start()
     {
-        if (_currentStamina < MaxStamina)
+        if (CurrentStamina < MaxStamina)
             StartCoroutine(_theStaminaRechargerTimer());
     }
 
     public void ThePlayerStaminaConsumption(float consumptionValue)
     {
-        if (_currentStamina >= consumptionValue)
+        if (CurrentStamina >= consumptionValue)
         {
-            _currentStamina -= consumptionValue;
-            StaminaSender?.Invoke(_currentStamina);
+            CurrentStamina -= consumptionValue;
+            StaminaSender?.Invoke(CurrentStamina);
         }
         else
             print("You dont have enough stamina");
@@ -39,16 +39,16 @@ public class PlayerStaminaController : MonoBehaviour
     public void TheStaminaRecharger(float rechargeValue)
     {
 
-        _currentStamina += rechargeValue;
-        if(_currentStamina > MaxStamina)
-            _currentStamina = MaxStamina;
-        StaminaSender?.Invoke(_currentStamina);
-        if (_currentStamina < MaxStamina)
+        CurrentStamina += rechargeValue;
+        if(CurrentStamina > MaxStamina)
+            CurrentStamina = MaxStamina;
+        StaminaSender?.Invoke(CurrentStamina);
+        if (CurrentStamina < MaxStamina)
         {
             isRechargeMode = true;
             StartCoroutine(_theStaminaRechargerTimer());
         }
-        else if (_currentStamina == MaxStamina)
+        else if (CurrentStamina == MaxStamina)
             StopAllCoroutines();
     }
 

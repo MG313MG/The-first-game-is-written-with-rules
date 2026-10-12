@@ -1,4 +1,5 @@
 using Unity.VectorGraphics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerPosition : MonoBehaviour
@@ -7,6 +8,8 @@ public class PlayerPosition : MonoBehaviour
     private PlayerMovement _playerMovement;
     [SerializeField] 
     private AbilityManager _abilityManager;
+    [SerializeField]
+    private CollectablePlayerAbilities _collectableAbilities;
 
     [Header("Positions")]
     public Vector3 LastPositionOnTheGround { get; private set; }
@@ -52,6 +55,14 @@ public class PlayerPosition : MonoBehaviour
             LastPositionOnTheGround = Vector3.zero;
         }
     }
+
+    public void TheSetGravity(int gravityValue)
+    {
+        Rigidbody2D rigidBody2D;
+        rigidBody2D = GetComponent<Rigidbody2D>();
+        rigidBody2D.gravityScale = gravityValue;
+    }
+
     public void SetRespawnPoint(Vector3 point, Scene sceneOfRespawnPointSet)
     {
         RespawnPointSet = point;

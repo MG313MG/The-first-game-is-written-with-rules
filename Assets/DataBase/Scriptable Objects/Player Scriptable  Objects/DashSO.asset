@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a9719e734fbe842941063bbaa838d6, type: 3}
   m_Name: DashSO
   m_EditorClassIdentifier: Assembly-CSharp::DashSO
-  AbilityName: 
-  StaminaCost: 0
+  AbilityName: Dash
+  StaminaCost: 15
   CoolDownTime: 0.8413375
-  isActivated: 0
-  ActivateTime: 1
-  DashForce: 0
+  isActivated: 1
+  ActivateTime: 2
+  DashForce: 20

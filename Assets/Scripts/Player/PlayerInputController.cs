@@ -10,6 +10,8 @@ public class PlayerInputController : MonoBehaviour
     private PlayerPosition _playerPosition;
     private PlayerAttackAndDefend _attackAndDefend;
 
+    private PlayerStaminaController _staminaController;
+
     [Space(5)]
     [Header("Player State")]
     public PlayerState CurrentState;
@@ -24,6 +26,7 @@ public class PlayerInputController : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         _playerPosition = GetComponent<PlayerPosition>();
         _attackAndDefend = GetComponent<PlayerAttackAndDefend>();
+        _staminaController = GetComponent<PlayerStaminaController>();
     }
 
     private void Update()
@@ -52,17 +55,22 @@ public class PlayerInputController : MonoBehaviour
                 _attackAndDefend.TheDefend();
                 CurrentState = PlayerState.Defend;
             }
-            else if (Input.GetMouseButtonDown(1) && _collectableAbilities.isCanDashing)
+            else if (Input.GetMouseButtonDown(1) && _collectableAbilities.isCanDashing && _staminaController.CurrentStamina >= _playerMovement.AbilitiesSO[0].StaminaCost && _playerMovement.AbilitiesSO[0].isActivated)
             {
+                isCanDoDifferentWork = false;
+                _staminaController.ThePlayerStaminaConsumption(_playerMovement.AbilitiesSO[0].StaminaCost);
                 CurrentState = PlayerState.Dash;
             }
-            else if (Input.GetKey(KeyCode.Space) && (_playerPosition.isGrounded || _collectableAbilities.isCanDubleJumping))
+            else if (Input.GetKeyDown(KeyCode.Space) && (_playerPosition.isGrounded || _collectableAbilities.isCanDubleJumping))
+            {
                 CurrentState = PlayerState.Jump;
+                _playerMovement.TheJump();
+            }
 
             else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && _playerPosition.isGrounded && !_playerPosition.isWalled)
                 CurrentState = PlayerState.Walk;
 
-            else if (!_playerPosition.isGrounded && CurrentState != PlayerState.Attak)
+            else if (!_playerPosition.isGrounded && CurrentState != PlayerState.Attak && CurrentState != PlayerState.Dash)
             {
                 CurrentState = PlayerState.Fall;
             }
@@ -96,8 +104,6 @@ public class PlayerInputController : MonoBehaviour
 
             case PlayerState.Jump:
                 isCanDoDifferentWork = true;
-                //CoolDownTime = 1;
-                _playerMovement.TheJump();
                 break;
 
             case PlayerState.Fall:
@@ -106,7 +112,7 @@ public class PlayerInputController : MonoBehaviour
                 break;
 
             case PlayerState.Dash:
-                isCanDoDifferentWork = false;
+
                 _playerMovement.TheDash();
                 break;
             case PlayerState.Attak:
@@ -149,5 +155,15 @@ public class PlayerInputController : MonoBehaviour
             _lastState = CurrentState;
             SendState?.Invoke(CurrentState);
         }
+    }
+
+    public void TheSetState(PlayerState state)
+    {
+        CurrentState = state;
+    }
+
+    public void TheSetIsCanDoDifferentWorkSetToTrue()
+    {
+        isCanDoDifferentWork = true;
     }
 }

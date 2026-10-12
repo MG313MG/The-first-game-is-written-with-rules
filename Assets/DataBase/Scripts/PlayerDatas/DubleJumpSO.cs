@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Player/Abilities/DubleJump")]
@@ -11,8 +12,9 @@ public class DubleJumpSO : AbilitiesSO
         if (_playerMovement != null && _rigidBody2D != null)
         {
             _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, _playerMovement.JumpSpeed);
-            _playerMovement.isCanDubleJumping = false;
-            _playerMovement.isCanDashing = true;
+            isActivated = false;
+            _playerMovement.AbilitiesSO[0].isActivated = true;
+            _playerMovement.ValueOfAbilityManage.The_Check_Not_Activated_Abilities();
         }
     }
 }

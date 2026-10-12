@@ -14,6 +14,7 @@ public class DashSO : AbilitiesSO
         {
             _rigidBody2D.linearVelocity = new Vector2(DashForce * _playerMovement.FaceDir, 0);
             isActivated = false;
+            _playerMovement.ValueOfAbilityManage.The_Check_Not_Activated_Abilities();
         }
     }
 }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7744c3d123f729d48b6e4a15a75ff962, type: 3}
   m_Name: DubleJumpSO
   m_EditorClassIdentifier: Assembly-CSharp::DubleJumpSO
-  AbilityName: 
-  StaminaCost: 0
+  AbilityName: DubleJump
+  StaminaCost: 5
   CoolDownTime: 0.8413375
-  isActivated: 0
-  ActivateTime: 1
+  isActivated: 1
+  ActivateTime: 0.5

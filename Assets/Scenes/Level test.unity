@@ -2452,6 +2452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479755518}
   - component: {fileID: 1479755517}
+  - component: {fileID: 1479755530}
   - component: {fileID: 1479755529}
   - component: {fileID: 1479755527}
   - component: {fileID: 1479755528}
@@ -2626,13 +2627,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77679bce08695b947a3029741c93e3be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  AbilitiesSO:
+  - {fileID: 11400000, guid: 93e0f6f22ceb9454db2b63e81aafe0d4, type: 2}
+  - {fileID: 11400000, guid: de51694ade7d91a4ca0c6d9e0ca851f2, type: 2}
+  ValueOfAbilityManage: {fileID: 0}
+  CollectedAbilities: {fileID: 11400000, guid: 3b44ce9de53347f4199b52525507a73c, type: 2}
   CoolDownTime: 0
   MoveSpeed: 5
-  JumpSpeed: 20
+  JumpSpeed: 21
   FaceDir: 1
   Damage: 0
-  isCanDubleJumping: 1
-  isCanDashing: 0
 --- !u!114 &1479755520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2661,6 +2665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cdc1ad7ec0d4b74389c44ca14fe2c40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AbilityManager
+  _collectedAbilities: {fileID: 11400000, guid: 3b44ce9de53347f4199b52525507a73c, type: 2}
   abilities:
   - {fileID: 11400000, guid: 93e0f6f22ceb9454db2b63e81aafe0d4, type: 2}
   - {fileID: 11400000, guid: de51694ade7d91a4ca0c6d9e0ca851f2, type: 2}
@@ -2693,7 +2698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerPositionSaver
   _playerMovement: {fileID: 1479755519}
-  _abilityManager: {fileID: 0}
+  _abilityManager: {fileID: 1479755521}
+  _collectableAbilities: {fileID: 11400000, guid: 3b44ce9de53347f4199b52525507a73c, type: 2}
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -2809,7 +2815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f75010ce475d384d86c21e6b1c65519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStaminaController
-  _currentStamina: 10
+  CurrentStamina: 100
   MaxStamina: 100
   _timeOfStaminaRechargerTimerMode: 3
 --- !u!114 &1479755529
@@ -2826,6 +2832,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HealthStaminaBarUI
   _healthSlider: {fileID: 875929081}
   _staminaSlider: {fileID: 1590368876}
+--- !u!114 &1479755530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479755514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cdc1ad7ec0d4b74389c44ca14fe2c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AbilityManager
+  _collectedAbilities: {fileID: 11400000, guid: 3b44ce9de53347f4199b52525507a73c, type: 2}
+  abilities:
+  - {fileID: 11400000, guid: 93e0f6f22ceb9454db2b63e81aafe0d4, type: 2}
+  - {fileID: 11400000, guid: de51694ade7d91a4ca0c6d9e0ca851f2, type: 2}
 --- !u!1 &1494844449
 GameObject:
   m_ObjectHideFlags: 0
@@ -3278,7 +3300,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 10
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

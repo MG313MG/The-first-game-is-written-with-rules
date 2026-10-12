@@ -90,7 +90,7 @@ public class PlayerAnimationsController : MonoBehaviour
             _playerInputController.CurrentState = PlayerState.Idle;
         else if (!playerPosition.isGrounded)
         {
-            _playerInputController.CurrentState = PlayerState.Fall;
+            //_playerInputController.CurrentState = PlayerState.Fall;
         }
     }
 }

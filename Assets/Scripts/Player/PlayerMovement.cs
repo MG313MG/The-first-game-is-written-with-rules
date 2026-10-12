@@ -3,9 +3,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
+    public AbilitiesSO[] AbilitiesSO;
+    public AbilityManager ValueOfAbilityManage;
     private PlayerPosition _playerPosition;
     private PlayerInputController _playerInputController;
     private Rigidbody2D _rigidBody2D;
+
+    private PlayerStaminaController _playerStaminaController;
+
+    private PlayerStaminaController _staminaController;
+
+    public CollectablePlayerAbilities CollectedAbilities;
 
     [Space(5)]
     [Header("Public Floats")]
@@ -14,12 +23,6 @@ public class PlayerMovement : MonoBehaviour
     public float JumpSpeed;
     public float FaceDir;
     public float Damage;
-
-    [Space(5)]
-    [Header("Public Bools")]
-    public bool isCanDubleJumping;
-    public bool isCanDashing;
-
 
 
     private float _xScale;
@@ -32,6 +35,9 @@ public class PlayerMovement : MonoBehaviour
         _playerPosition = GetComponent<PlayerPosition>();
         _playerInputController = GetComponent<PlayerInputController>();
         _rigidBody2D = GetComponent<Rigidbody2D>();
+        ValueOfAbilityManage = GetComponent<AbilityManager>();
+        _staminaController = GetComponent<PlayerStaminaController>();
+        _playerStaminaController = GetComponent<PlayerStaminaController>();
         _xScale = transform.localScale.x;
     }
 
@@ -54,15 +60,6 @@ public class PlayerMovement : MonoBehaviour
         if (FaceDir != transform.localScale.x)
             transform.localScale = new Vector3(_xScale * FaceDir, transform.localScale.y, transform.localScale.z);
     }
-    
-    //This function must defind in ability manager and optimize with it
-    private void _theSetAbilitiesToTrue()
-    {
-        isCanDubleJumping = true;
-        isCanDashing = true;
-    }
-
-    
 
     //MovementMods
     public void TheIdle()
@@ -80,13 +77,14 @@ public class PlayerMovement : MonoBehaviour
         {
             _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, JumpSpeed);
             _playerInputController.CurrentState = PlayerState.Fall;
-            return;
         }
-        else if (isCanDubleJumping)
+        else if (CollectedAbilities.isCanDubleJumping && AbilitiesSO[1].isActivated && _playerStaminaController.CurrentStamina > AbilitiesSO[1].StaminaCost )
         {
-            _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, JumpSpeed);
-            isCanDubleJumping = false;
+            //_rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, JumpSpeed);
+            AbilitiesSO[1].Activate(gameObject);
+            _playerStaminaController.ThePlayerStaminaConsumption(AbilitiesSO[1].StaminaCost);
             _playerInputController.CurrentState = PlayerState.Fall;
+            AbilitiesSO[1].isActivated = false;
         }
     }
     public void TheFall()
@@ -102,10 +100,11 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TheDash()
     {
-        if (isCanDashing)
+        //The player's stamina is reduced via a function within the dash animation event.س
+        if (CollectedAbilities.isCanDashing)
         {
-            isCanDashing = false;
-            _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, 0);
+            AbilitiesSO[0].Activate(gameObject);
+            AbilitiesSO[0].isActivated = false;
         }
     }
     public void TheCoolDownTimer()
@@ -118,5 +117,17 @@ public class PlayerMovement : MonoBehaviour
         _playerInputController.isCanDoDifferentWork = true;
     }
 
+    //If you want use from default velocity input zero in fields
+    public void TheSetXSpeed(float xSpeed)
+    {
+        if (xSpeed < 0) xSpeed = _rigidBody2D.linearVelocity.x;
+        _rigidBody2D.linearVelocity = new Vector2(xSpeed * FaceDir, _rigidBody2D.linearVelocity.y);
+    }
+    public void THeSetYSpeed(float ySpeed)
+    {
+        if(ySpeed < 0) ySpeed = _rigidBody2D.linearVelocity.y;
+        _rigidBody2D.linearVelocity = new Vector2(_rigidBody2D.linearVelocity.x, ySpeed);
+
+    }
 }
 
