@@ -2501,7 +2501,7 @@ GameObject:
   - component: {fileID: 1479755531}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3561,11 +3561,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe0081bc374eee45a27402131d69f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIPosition
-  isPlayer: 0
+  isPlayer: 1
   isGrounded: 0
   isGroundInYourFront: 0
   isWallInYourFront: 0
-  isPlayerInYourFront: 0
   _gameObjectIsGroundInYourFront: {fileID: 2120656942}
   _gameObjectIsPlayerOrWallInYourFront: {fileID: 345438247}
   _groundDistance: 0.45
