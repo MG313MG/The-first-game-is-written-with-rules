@@ -1,7 +1,5 @@
 using UnityEngine;
 
-public enum EnemyStates { Idle, Walk, Run, Jump, Fall, Attack, Hit, Die }
-
 public class AIPosition : MonoBehaviour
 {
     [Header("Need To Check")]
@@ -35,8 +33,10 @@ public class AIPosition : MonoBehaviour
     [SerializeField]
     private LayerMask _playerLayer;
 
+    [Space(5)]
+    [Header("Face")]
+    public float FaceDir;
     private float _xScale;
-    private float _faceDir;
 
     public RaycastHit2D PlayerRaycast;
 
@@ -52,7 +52,7 @@ public class AIPosition : MonoBehaviour
     void Start()
     {
         _xScale = transform.localScale.x;
-        _faceDir = UnityEngine.Random.value < 0.5f ? -1 : 1;
+        FaceDir = UnityEngine.Random.value < 0.5f ? -1 : 1;
         _theChangeFace();
     }
 
@@ -72,16 +72,16 @@ public class AIPosition : MonoBehaviour
 
         isGrounded = Physics2D.Raycast(new Vector3(transform.position.x, groundFrontPos.y, transform.position.z), Vector2.down, _groundDistance, _groundLayer);
         isGroundInYourFront = Physics2D.Raycast(groundFrontPos, Vector2.down, _groundDistance, _groundLayer);
-        isWallInYourFront = Physics2D.Raycast(wallPos, Vector2.right * _faceDir, _wallDistance, _groundLayer);
+        isWallInYourFront = Physics2D.Raycast(wallPos, Vector2.right * FaceDir, _wallDistance, _groundLayer);
 
         if (isPlayer)
-            PlayerRaycast = Physics2D.Raycast(wallPos, Vector2.right * _faceDir, _playerDistance, _playerLayer | _groundLayer);
+            PlayerRaycast = Physics2D.Raycast(wallPos, Vector2.right * FaceDir, _playerDistance, _playerLayer | _groundLayer);
     }
 
     private void _theChangeFace()
     {
-        _faceDir *= -1;
-        transform.localScale = new Vector3(_xScale * _faceDir, transform.localScale.y, transform.localScale.z);
+        FaceDir *= -1;
+        transform.localScale = new Vector3(_xScale * FaceDir, transform.localScale.y, transform.localScale.z);
     }
 
     private void OnDrawGizmos()
@@ -98,9 +98,9 @@ public class AIPosition : MonoBehaviour
         if (isPlayer)
         {
             Gizmos.color = Color.gray;
-            Gizmos.DrawLine(wallPos, new Vector3(wallPos.x + (_playerDistance * _faceDir), wallPos.y, wallPos.z));
+            Gizmos.DrawLine(wallPos, new Vector3(wallPos.x + (_playerDistance * FaceDir), wallPos.y, wallPos.z));
         }
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(wallPos, new Vector3(wallPos.x + (_wallDistance * _faceDir), wallPos.y, wallPos.z));
+        Gizmos.DrawLine(wallPos, new Vector3(wallPos.x + (_wallDistance * FaceDir), wallPos.y, wallPos.z));
     }
 }

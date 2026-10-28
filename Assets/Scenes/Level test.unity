@@ -927,7 +927,7 @@ Transform:
   m_GameObject: {fileID: 345438247}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.176, y: 0, z: 0}
+  m_LocalPosition: {x: 0.125, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3466,6 +3466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697804594}
   - component: {fileID: 1697804593}
+  - component: {fileID: 1697804595}
   - component: {fileID: 1697804592}
   - component: {fileID: 1697804591}
   - component: {fileID: 1697804590}
@@ -3534,10 +3535,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -3569,13 +3570,14 @@ MonoBehaviour:
   _gameObjectIsPlayerOrWallInYourFront: {fileID: 345438247}
   _groundDistance: 0.45
   _wallDistance: 1.5
-  _playerDistance: 5
+  _playerDistance: 7
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
   _playerLayer:
     serializedVersion: 2
     m_Bits: 256
+  FaceDir: 0
 --- !u!212 &1697804593
 SpriteRenderer:
   serializedVersion: 3
@@ -3645,7 +3647,7 @@ Transform:
   m_GameObject: {fileID: 1697804589}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2, y: -1.74, z: 0}
+  m_LocalPosition: {x: 3.76, y: -2.78, z: 0}
   m_LocalScale: {x: 9, y: 9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3653,6 +3655,25 @@ Transform:
   - {fileID: 2120656943}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1697804595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697804589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99beb8ed25fb5d447af989f964cc93cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AIMovement
+  _canRun: 0
+  _canDash: 0
+  _canJump: 0
+  _walkSpeed: 2
+  _runSpeed: 3
+  _jumpPower: 5
+  _dashPower: 0
 --- !u!1 &1883573784
 GameObject:
   m_ObjectHideFlags: 0
