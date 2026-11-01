@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class AIPosition : MonoBehaviour
 {
+    private AISetState _state;
+
     [Header("Need To Check")]
     [SerializeField] private bool isPlayer;
     [Space(5)]
@@ -51,6 +53,7 @@ public class AIPosition : MonoBehaviour
 
     void Start()
     {
+        _state = GetComponent<AISetState>();
         _xScale = transform.localScale.x;
         FaceDir = UnityEngine.Random.value < 0.5f ? -1 : 1;
         _theChangeFace();
@@ -80,6 +83,7 @@ public class AIPosition : MonoBehaviour
 
     private void _theChangeFace()
     {
+        _state.TheSetIDLEMode();
         FaceDir *= -1;
         transform.localScale = new Vector3(_xScale * FaceDir, transform.localScale.y, transform.localScale.z);
     }

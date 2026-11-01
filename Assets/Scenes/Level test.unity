@@ -3466,6 +3466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697804594}
   - component: {fileID: 1697804593}
+  - component: {fileID: 1697804596}
   - component: {fileID: 1697804595}
   - component: {fileID: 1697804592}
   - component: {fileID: 1697804591}
@@ -3570,7 +3571,7 @@ MonoBehaviour:
   _gameObjectIsPlayerOrWallInYourFront: {fileID: 345438247}
   _groundDistance: 0.45
   _wallDistance: 1.5
-  _playerDistance: 7
+  _playerDistance: 6
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -3667,13 +3668,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99beb8ed25fb5d447af989f964cc93cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIMovement
-  _canRun: 0
-  _canDash: 0
-  _canJump: 0
-  _walkSpeed: 2
+  _walkSpeed: 4
   _runSpeed: 3
   _jumpPower: 5
-  _dashPower: 0
+  _dashPower: 20
+  isDashing: 0
+--- !u!114 &1697804596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697804589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0021031c4146a95449e181facbddea1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AISetState
+  CurrentState: 0
+  isCanIdle: 1
+  isCanRun: 0
+  isCanDash: 1
+  isCanJump: 0
+  isPlayerHere: 0
+  _canFollowPlayer: 0
+  _playerFollowTime: 0
+  CanDoDifferentWork: 0
+  _idleTime: 1.5
 --- !u!1 &1883573784
 GameObject:
   m_ObjectHideFlags: 0
