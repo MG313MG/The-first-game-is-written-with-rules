@@ -3669,7 +3669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AIMovement
   _walkSpeed: 4
-  _runSpeed: 3
+  _runSpeed: 7
   _jumpPower: 5
   _dashPower: 20
   isDashing: 0
@@ -3686,15 +3686,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AISetState
   CurrentState: 0
+  isGroundEnemy: 1
+  isAirEnemy: 0
+  CanDoDifferentWork: 0
+  _idleTime: 1.5
   isCanIdle: 1
   isCanRun: 0
-  isCanDash: 1
+  isCanDash: 0
   isCanJump: 0
   isPlayerHere: 0
   _canFollowPlayer: 0
   _playerFollowTime: 0
-  CanDoDifferentWork: 0
-  _idleTime: 1.5
 --- !u!1 &1883573784
 GameObject:
   m_ObjectHideFlags: 0

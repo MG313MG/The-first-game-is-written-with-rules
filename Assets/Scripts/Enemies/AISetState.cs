@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public enum EnemyStates { Idle, Walk, Run, Jump, Fall, Dash, Attack, Hit, Die }
+public enum EnemyStates { Idle, Walk, Run, Fly, Jump, Fall, Dash, Attack, Hit, Die }
 
 public class AISetState : MonoBehaviour
 {
@@ -11,7 +11,14 @@ public class AISetState : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
 
     public EnemyStates CurrentState;
+    [Header("Enemy")]
 
+    public bool isGroundEnemy;
+    public bool isAirEnemy;
+
+    public bool CanDoDifferentWork;
+    [SerializeField] private float _idleTime = 1.5f;
+    [Space(5)]
     [Header("Abilities")]
     [SerializeField] private bool isCanIdle;
     [SerializeField] private bool isCanRun;
@@ -24,11 +31,7 @@ public class AISetState : MonoBehaviour
     [SerializeField] private bool _canFollowPlayer;
 
     [SerializeField] private float _playerFollowTime = 2;
-    [Space(5)]
-    [Header("Enemy")]
 
-    public bool CanDoDifferentWork;
-    [SerializeField] private float _idleTime = 1.5f;
 
     void Start()
     {
@@ -46,18 +49,25 @@ public class AISetState : MonoBehaviour
         }
         if(CanDoDifferentWork)
         {
-            if (_position.PlayerRaycast && _position.PlayerRaycast.distance < 2.75f)
-                CurrentState = EnemyStates.Attack;
-            else if (isCanDash && _position.PlayerRaycast)
-                CurrentState = EnemyStates.Dash;
-            else if (_position.PlayerRaycast && !isCanDash)
-                CurrentState = EnemyStates.Run;
-            else if (!_position.isGrounded && _rigidbody2D.linearVelocityY < 0)
-                CurrentState = EnemyStates.Fall;
-            else if (!_position.isGrounded && (_position.isWallInYourFront || !_position.isGroundInYourFront) && isPlayerHere)
-                CurrentState = EnemyStates.Jump;
-            else if (_position.isGrounded && CurrentState != EnemyStates.Idle)
-                CurrentState = EnemyStates.Walk;
+            if(isGroundEnemy)
+            {
+                if (_position.PlayerRaycast && _position.PlayerRaycast.distance < 2.75f)
+                    CurrentState = EnemyStates.Attack;
+                else if (isCanDash && _position.PlayerRaycast)
+                    CurrentState = EnemyStates.Dash;
+                else if (_position.PlayerRaycast && !isCanDash && isCanRun)
+                    CurrentState = EnemyStates.Run;
+                else if (!_position.isGrounded && _rigidbody2D.linearVelocityY < 0)
+                    CurrentState = EnemyStates.Fall;
+                else if (!_position.isGrounded && (_position.isWallInYourFront || !_position.isGroundInYourFront) && isPlayerHere)
+                    CurrentState = EnemyStates.Jump;
+                else if (_position.isGrounded && CurrentState != EnemyStates.Idle)
+                    CurrentState = EnemyStates.Walk;
+            }
+            else if (isAirEnemy)
+            {
+                
+            }
         }
     }
 
@@ -70,6 +80,8 @@ public class AISetState : MonoBehaviour
     {
         switch (CurrentState)
         {
+            case EnemyStates.Fly:
+
             case EnemyStates.Idle:
                 _rigidbody2D.linearVelocity = new Vector2(0, _rigidbody2D.linearVelocity.y);
                 break;
