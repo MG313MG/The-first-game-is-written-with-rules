@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public enum EnemyStates { Idle, Walk, Run, Fly, Jump, Fall, Dash, Attack, Hit, Die }
+public enum EnemyStates { Idle, Walk, Run, Jump, Fall, Fly, Dash, Attack, Hit, Die }
 
 public class AISetState : MonoBehaviour
 {
@@ -59,7 +59,7 @@ public class AISetState : MonoBehaviour
                     CurrentState = EnemyStates.Run;
                 else if (!_position.isGrounded && _rigidbody2D.linearVelocityY < 0)
                     CurrentState = EnemyStates.Fall;
-                else if (!_position.isGrounded && (_position.isWallInYourFront || !_position.isGroundInYourFront) && isPlayerHere)
+                else if (_position.isGrounded && (_position.isWallInYourFront || !_position.isGroundInYourFront) && isPlayerHere)
                     CurrentState = EnemyStates.Jump;
                 else if (_position.isGrounded && CurrentState != EnemyStates.Idle)
                     CurrentState = EnemyStates.Walk;
