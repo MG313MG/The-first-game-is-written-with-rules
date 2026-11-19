@@ -31,6 +31,7 @@ public class AISetState : MonoBehaviour
     [SerializeField] private bool _canFollowPlayer;
 
     [SerializeField] private float _playerFollowTime = 2;
+    [SerializeField] private float _playerِDistance = 2;
 
 
     void Start()
@@ -51,7 +52,7 @@ public class AISetState : MonoBehaviour
         {
             if(isGroundEnemy)
             {
-                if (_position.PlayerRaycast && _position.PlayerRaycast.distance < 2.75f)
+                if (_position.IsPlayerVisible() && _position.PlayerRaycast.distance < _playerِDistance)
                     CurrentState = EnemyStates.Attack;
                 else if (isCanDash && _position.PlayerRaycast)
                     CurrentState = EnemyStates.Dash;
@@ -59,7 +60,7 @@ public class AISetState : MonoBehaviour
                     CurrentState = EnemyStates.Run;
                 else if (!_position.isGrounded && _rigidbody2D.linearVelocityY < 0)
                     CurrentState = EnemyStates.Fall;
-                else if (_position.isGrounded && (_position.isWallInYourFront || !_position.isGroundInYourFront) && isPlayerHere)
+                else if (_position.isGrounded && (_position.isWallInYourFront || (!_position.isGroundInYourFront && _position.IsPlayerVisible()) && isPlayerHere))
                     CurrentState = EnemyStates.Jump;
                 else if (_position.isGrounded && CurrentState != EnemyStates.Idle)
                     CurrentState = EnemyStates.Walk;

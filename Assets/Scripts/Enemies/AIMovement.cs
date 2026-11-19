@@ -15,6 +15,7 @@ public class AIMovement : MonoBehaviour
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _dashPower;
 
+    public bool isRunning;
     public bool isDashing;
 
 
@@ -36,6 +37,7 @@ public class AIMovement : MonoBehaviour
     }
     public void TheRun()
     {
+        isRunning = true;
         _rigidBody2D.linearVelocity = new Vector2(_runSpeed * _position.FaceDir, _rigidBody2D.linearVelocity.y);
     }
     public void TheJump()
